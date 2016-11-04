@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var jsdom = require("jsdom");
+var fs = require("fs");
 var mysql = require('mysql');
 var pool = mysql.createPool({
 	host: 'localhost',
@@ -7,6 +9,6 @@ var pool = mysql.createPool({
 	password: '1234'
 });
 
-exports.sign_up = function(){
-
+exports.sign = function(){
+	
 }
