@@ -8,13 +8,14 @@
   "dependencies": {
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
-    "ejs": "~2.5.2",
     "debug": "~2.2.0",
+    "ejs": "~2.5.2",
     "express": "~4.14.0",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "express-session": "~1.14.2",
-    "jQuery": "~1.7.4",
-    "jsdom": "~7.0.0"
+    "stylus": "0.54.5",
+    "jquery": "~3.1.1",
+    "jsdom": "~9.8.3",
+    "mysql": "~2.12.0"
   }
 }
