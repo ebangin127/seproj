@@ -3,13 +3,13 @@
   class AccountBO {
     private $accountdao;
     function __construct() {
-    	$this->accountdao = new AccountDAO();
+      $this->accountdao = new AccountDAO();
     }
-   	function register($account) {
-   		$this->accountdao->insert($account);
-   	}
-   	function registerSeller($account, $businessnumber, $bankaccount) {
-   		$this->accountdao->insertSeller($account, $businessnumber, $bankaccount);
-   	}
+    function register($account) {
+      $this->accountdao->insert($account);
+    }
+    function registerSeller($account, $businessnumber, $bankaccount) {
+      $this->accountdao->insertSeller($account, $businessnumber, $bankaccount);
+    }
   }
 ?>

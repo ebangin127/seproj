@@ -3,7 +3,7 @@
   class SQLConnector {
     private $Conn;
     function __construct() {
-    	$this->Connect();
+      $this->Connect();
     }
     
     function __destruct() {
@@ -52,21 +52,21 @@
     }
 
     function Query($Query) {
-    	if(is_null($this->Conn)) {
-	        printf(
-	          "Failed 2 - No MySQL connection");
-	        return False;
-    	}
-  		$Result = NULL;
-  	  if (!$Result = $this->Conn->query($Query)) {	
+      if(is_null($this->Conn)) {
+          printf(
+            "Failed 2 - No MySQL connection");
+          return False;
+      }
+      $Result = NULL;
+      if (!$Result = $this->Conn->query($Query)) {  
         printf(
           "Failed 3 - Query failed<br/>(Error: %s)",
           $this->Conn->error);
         return NULL;
       }
       else {
-      	return $Result;
+        return $Result;
       }
-  	}
+    }
   }
 ?>
