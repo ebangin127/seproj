@@ -17,7 +17,7 @@
            VALUES
            ('%s', '%s')",
             $businessnumber->getID(), $businessnumber->getBusinessNumber());
-      $GLOBALS['sqlinterface']->Query($query);
+      return $GLOBALS['sqlinterface']->Query($query);
     }
   }
 ?>

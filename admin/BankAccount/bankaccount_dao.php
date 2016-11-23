@@ -19,7 +19,7 @@
            ('%s', %s, '%s')",
             $bankaccount->getID(), $bankaccount->getBankcode(),
             $bankaccount->getAccountnum());
-      $GLOBALS['sqlinterface']->Query($query);
+      return $GLOBALS['sqlinterface']->Query($query);
     }
   }
 ?>

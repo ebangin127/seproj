@@ -39,14 +39,28 @@
             $account->getPhonenum(), $account->getZipcode(),
             $account->getAddress1(), $account->getAddress2(),
             $account->getAccounttype());
-      $GLOBALS['sqlinterface']->Query($query);
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+    function selectByID($ID) {
+      $ID = $GLOBALS['sqlinterface']->Escape($ID);
+      $query = 
+        sprintf(
+          "SELECT ID FROM Accounts WHERE
+            ID='%s'", $ID);
+      return $GLOBALS['sqlinterface']->Query($query);
     }
     function insertSeller($account, $businessnumber, $bankaccount) {
       $GLOBALS['sqlinterface']->BeginTransaction();
-      $this->insert($account);
-      $this->bankaccountdao->insert($bankaccount);
-      $this->businessnumberdao->insert($businessnumber);
-      $GLOBALS['sqlinterface']->CommitTransaction();
+      if($this->insert($account))
+        if($this->bankaccountdao->insert($bankaccount))
+          if($this->businessnumberdao->insert($businessnumber))
+            $GLOBALS['sqlinterface']->CommitTransaction();
+          else
+            $GLOBALS['sqlinterface']->RollbackTransaction();
+        else
+          $GLOBALS['sqlinterface']->RollbackTransaction();
+      else
+        $GLOBALS['sqlinterface']->RollbackTransaction();
     }
   }
 ?>

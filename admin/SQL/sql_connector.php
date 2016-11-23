@@ -10,7 +10,13 @@
       $this->Close();
     }
     
-    private function Connect() {
+    private function setUnicode() {
+      return $this->Conn->set_charset("utf8") &&
+        $this->Conn->Query("set session character_set_connection=utf8") &&
+        $this->Conn->Query("set session character_set_results=utf8") &&
+        $this->Conn->Query("set session character_set_client=utf8");
+    }
+    private function Connect() {  
       $this->Conn = new mysqli(
         "localhost",
         dbid(),
@@ -23,6 +29,13 @@
           $this->Conn->connect_errno);
         return False;
       }
+
+      if (!$this->setUnicode()) {
+        printf("Failed 4 - Failed changing to utf8<br/>
+          (Error: %s)", $this->Conn->error);
+        return False;
+      }
+
       return True;
     }
     
