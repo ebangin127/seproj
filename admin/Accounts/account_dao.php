@@ -45,7 +45,7 @@
       $ID = $GLOBALS['sqlinterface']->Escape($ID);
       $query = 
         sprintf(
-          "SELECT ID FROM Accounts WHERE
+          "SELECT * FROM Accounts WHERE
             ID='%s'", $ID);
       return $GLOBALS['sqlinterface']->Query($query);
     }

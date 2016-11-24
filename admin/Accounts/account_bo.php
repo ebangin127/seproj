@@ -16,7 +16,7 @@
       if(!$result)
         return 0;
       else
-        return $result->num_rows;
+        return $result;
     }
   }
 ?>

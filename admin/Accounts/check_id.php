@@ -9,7 +9,7 @@
   if(Checkform()) {
     require_once '../Accounts/account_bo.php';
     $accountbo = new AccountBO();
-    if($accountbo->findID($_GET['id'])) {
+    if($accountbo->findID($_GET['id'])->num_rows) {
       printf("이미 있는 ID입니다");
     }
     else {
