@@ -1,0 +1,20 @@
+<html>
+	<head>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src='../js/login.js'></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1> 로그인<br><br></h1>
+			<form action="../php/login_do.php" method="post" id="loginfrm" style="text-align:center">
+				<div class="form-group">
+					<input type="text" class="form-control" id="id" name="id" placeholder="ID" style="width:300px; margin:auto;">
+					<input type="password" class="form-control" id="password" name="password" placeholder="PASSWORD" style="width:300px;margin:auto;">
+				</div>
+				<button type="submit" class="btn btn-default" name : "srhbtn">로그인</button>
+				<button type="button" class="btn btn-default" onclick="location.href = 'sign.htm'">회원 가입</button>
+			</form>
+		</div>
+  	</body>
+</html>
