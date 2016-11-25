@@ -41,6 +41,10 @@
             $account->getAccounttype());
       return $GLOBALS['sqlinterface']->Query($query);
     }
+    function selectAll() {
+      $query = sprintf("SELECT * FROM Accounts");
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
     function selectByID($ID) {
       $ID = $GLOBALS['sqlinterface']->Escape($ID);
       $query = 

@@ -11,6 +11,9 @@
     function registerSeller($account, $businessnumber, $bankaccount) {
       $this->accountdao->insertSeller($account, $businessnumber, $bankaccount);
     }
+    function getAll() {
+      return $this->accountdao->selectAll();
+    }
     function findID($ID) {
       $result = $this->accountdao->selectByID($ID);
       if(!$result)
