@@ -1,7 +1,6 @@
 var dupFlag = false;
 
 $(document).ready(function(){
-
 	$('input#id').change(function() {
 		console.log("make false");
 		dupFlag = false;
@@ -15,7 +14,6 @@ $(document).ready(function(){
 		else
 			return checkEmpty();
 	});
-
 });
 
 function checkEmpty(){
@@ -59,7 +57,7 @@ function checkDuplicateID(){
 		return false;
 	}
 	$.ajax({
-		url:'php/duplicated_ID.php?id='+$('input#id').val(),
+		url:'../php/duplicated_ID.php?id='+$('input#id').val(),
 		success:function(data){
 			if(!data){
 				alert('이미 사용중인 아이디입니다.');
