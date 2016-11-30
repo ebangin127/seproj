@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("form#loginfrm").bind("submit", function(){
+	$("form#form-signin").bind("submit", function(){
 		return checkEmpty();
 	});
 });
