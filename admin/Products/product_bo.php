@@ -5,6 +5,9 @@
     function __construct() {
       $this->productdao = new ProductDAO();
     }
+    function add($product) {
+      return $this->productdao->insert($product);
+    }
     function getAll() {
       return $this->productdao->selectAll();
     }

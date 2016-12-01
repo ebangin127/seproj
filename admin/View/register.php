@@ -1,3 +1,6 @@
+<?php
+  require_once '../Accounts/required_admin.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,7 +13,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="http://d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
-    <script src="js/3rdparty/cryptojs/core.js"></script>
     <script src="js/3rdparty/cryptojs/sha1.js"></script>
     <script src="js/register.js"></script>
     <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
@@ -136,28 +138,28 @@
           </div>
         </section>
       </div>
-      <script>
-        $('input[type="radio"][name="accounttype"]').on('change', function(e) {
-          if($(this).val() === "0")
-            showSellerOnlyForms();
-          else
-            hideSellerOnlyForms();
-        });
-        $('#verify_id').click(function() {
-          $.ajax({
-            type: 'get',
-            dataType: 'text',
-            url: '/Accounts/check_id.php',
-            data: {id: document.forms["register"]["id"].value},
-            success: function (data) {
-              alert(data);
-            },
-            error: function (request, status, error) {
-                console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
-            }
-          });
-        });
-      </script>
     </form>
+    <script>
+      $('input[type="radio"][name="accounttype"]').on('change', function(e) {
+        if($(this).val() === "0")
+          showSellerOnlyForms();
+        else
+          hideSellerOnlyForms();
+      });
+      $('#verify_id').click(function() {
+        $.ajax({
+          type: 'get',
+          dataType: 'text',
+          url: '/Accounts/check_id.php',
+          data: {id: document.forms["register"]["id"].value},
+          success: function (data) {
+            alert(data);
+          },
+          error: function (request, status, error) {
+            console.log('code: '+request.status+"\n"+'message: '+request.responseText+"\n"+'error: '+error);
+          }
+        });
+      });
+    </script>
   </body>
 </html>

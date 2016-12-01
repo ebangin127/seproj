@@ -29,20 +29,33 @@
       if($account = $accountbo->findID($_POST['id'])) {
         $accountrow = $account->fetch_assoc();
         if($accountrow["PW"] == $_POST['pw']) {
-          printf("%s", "<script>alert('로그인 성공');</script>");
+          if($accountrow["type"] == "buyer")
+            printf("%s", "<script>alert('구매자는 이용할 수 없습니다'); history.back();</script>");
           $_SESSION["id"] = $_POST['id'];
+          $_SESSION["type"] = $accountrow["type"];
+          switch ($accountrow["type"]) {
+            case "seller":
+              header("location:/View/manage_orders.php");
+              break;
+            case "reviewer":
+              header("location:/View/manage_benchmarks.php");
+              break;
+            case "admin":
+              header("location:/View/manage_accounts.php");
+              break;
+          }
         }
         else {
-          printf("%s", "<script>alert('비밀번호를 확인해주세요');</script>");
+          printf("%s", "<script>alert('비밀번호를 확인해주세요'); history.back();</script>");
         }
       }
       else {
-        printf("%s", "<script>alert('ID가 존재하지 않습니다');</script>");
+        printf("%s", "<script>alert('ID가 존재하지 않습니다'); history.back();</script>");
       }
     }
   }
   else {
-    printf("%s%s%s", "<script>alert('이미 ", $_SESSION["id"], "로 로그인되어있습니다. 자동으로 로그아웃됩니다.');</script>");
+    printf("%s%s%s", "<script>alert('이미 ", $_SESSION["id"], "로 로그인되어있습니다. 자동으로 로그아웃됩니다.'); history.back();</script>");
     session_destroy();
   }
 ?>

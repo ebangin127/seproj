@@ -19,5 +19,16 @@
             $businessnumber->getID(), $businessnumber->getBusinessNumber());
       return $GLOBALS['sqlinterface']->Query($query);
     }
+    function update($businessnumber) {
+      $businessnumber = $this->escape($businessnumber);
+      $query = 
+        sprintf(
+          "UPDATE BusinessNumbers
+           SET BusinessNumber='%s'
+           WHERE ID='%s'",
+            $businessnumber->getBusinessNumber(),
+            $businessnumber->getID());
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
   }
 ?>

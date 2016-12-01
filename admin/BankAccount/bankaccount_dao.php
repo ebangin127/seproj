@@ -21,5 +21,16 @@
             $bankaccount->getAccountnum());
       return $GLOBALS['sqlinterface']->Query($query);
     }
+    function update($bankaccount) {
+      $bankaccount = $this->escape($bankaccount);
+      $query = 
+        sprintf(
+          "UPDATE BankAccount
+           SET bankcode='%s', accountnum='%s'
+           WHERE ID='%s'",
+            $bankaccount->getBankcode(), $bankaccount->getAccountnum(),
+            $bankaccount->getID());
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
   }
 ?>

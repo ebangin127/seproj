@@ -1,3 +1,6 @@
+<?php
+  require_once '../Accounts/required_admin.php';
+?>
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,7 +22,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">회원 정보 변경</a></li>
-            <li><a href="#">로그아웃</a></li>
+            <li><a href="/Accounts/logout.php">로그아웃</a></li>
           </ul>
         </div>
       </div>
@@ -29,7 +32,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li id="manage_member"><a href="/View/manage_members.php">회원 관리</a></li>
+            <li id="manage_member"><a href="/View/manage_accounts.php">회원 관리</a></li>
             <li id="manage_order"><a href="/View/manage_orders.php">주문 관리</a></li>
             <li id="manage_product"><a href="/View/manage_products.php">상품 관리</a></li>
             <li id="manage_benchmark"><a href="/View/manage_benchmarks.php">벤치마크 관리</a></li>
@@ -45,7 +48,7 @@
               </tbody>
             </table>
           </div>
-          <p style="text-align:right"><a href="/View/register.htm" target="_blank">셀러/리뷰어 추가</a></p>
+          <p style="text-align:right"><a href="/View/register.php" target="_blank">셀러/리뷰어 추가</a></p>
         </div>
       </div>
     </div>
@@ -54,22 +57,27 @@
       var header = ["수정", "회원 유형", "ID", "이름", "이메일", "전화번호"];
       var data = [
 <?php
-  require_once '../Accounts/login_required.php';
   require_once '../Accounts/account_bo.php';
   $accountbo = new AccountBO();
   if($accounts = $accountbo->getAll()) {
     while($accountrow = $accounts->fetch_assoc()) {
-      printf('["%s", "%s", "%s", "%s", "%s", "%s"],', "", 
+      printf('["%s", "%s", "<a href=\"/View/modify_account_admin.php?id=%s\">%s</a>", "%s", "%s", "%s"],', "", 
         $accountrow["type"], $accountrow["ID"],
-        $accountrow["name"], $accountrow["email"],
-        $accountrow["phonenum"]);
+        $accountrow["ID"], $accountrow["name"],
+        $accountrow["email"], $accountrow["phonenum"]);
     }
   }
 ?>
         ];
+      var type =
+<?php
+  printf('"%s"', $_SESSION['type']);
+?>
+      ;
       var CurrentMenu = "manage_member";
       $("#" + CurrentMenu).addClass("active");
       printTable(header, data);
+      refreshMenu(type);
     </script>
   </body>
 </html>

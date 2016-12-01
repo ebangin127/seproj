@@ -13,7 +13,7 @@
   <body>
 <?php
   function IsSeller($accounttype) {
-    $SELLER = '0';
+    $SELLER = 'seller';
     return ($accounttype == $SELLER);
   }
   function CheckDefaultForm() {
@@ -43,23 +43,10 @@
     }
     return TRUE;
   }
-  function GetAccountType($accounttype) {
-    switch ($accounttype) {
-    case '0':
-      return 'seller';
-      break;
-    case '1':
-      return 'reviewer';
-      break;
-    default:
-      return '';
-      break;
-    }
-  }
   function BuildAccountObject() {
     require_once '../Accounts/account_vo.php';
     return new AccountVO(
-      GetAccountType($_POST['accounttype']),
+      $_POST['accounttype'],
       $_POST['id'],
       $_POST['pw'],
       $_POST['email'],
@@ -90,13 +77,13 @@
     if(IsSeller($_POST['accounttype'])) {
       $businessnumber = BuildBusinessNumberObject();
       $bankaccount = BuildBankAccountObject();
-      $accountbo->registerSeller($account, $businessnumber, $bankaccount);
+      $accountbo->modifySeller($account, $businessnumber, $bankaccount);
     }
     else {
-      $accountbo->register($account);
+      $accountbo->modify($account);
     }
   }
-  printf("%s", "<script>self.opener = self; window.close();</script>");
+  printf("<script>window.location.href = '%s';</script>", $_SERVER['HTTP_REFERER']);
 ?>
   </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+  require_once '../Accounts/required_seller.php';
+?>
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,7 +22,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">회원 정보 변경</a></li>
-            <li><a href="#">로그아웃</a></li>
+            <li><a href="/Accounts/logout.php">로그아웃</a></li>
           </ul>
         </div>
       </div>
@@ -29,7 +32,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li id="manage_member"><a href="/View/manage_members.php">회원 관리</a></li>
+            <li id="manage_accounts"><a href="/View/manage_accounts.php">회원 관리</a></li>
             <li id="manage_order"><a href="/View/manage_orders.php">주문 관리</a></li>
             <li id="manage_product"><a href="/View/manage_products.php">상품 관리</a></li>
             <li id="manage_benchmark"><a href="/View/manage_benchmarks.php">벤치마크 관리</a></li>
@@ -53,22 +56,28 @@
       var header = ["수정", "주문 번호", "주문 상태", "판매자", "구매자", "총 구매 가격"];
       var data = [
 <?php
-  require_once '../Accounts/login_required.php';
   require_once '../Orders/order_bo.php';
   $orderbo = new OrderBO();
   if($orders = $orderbo->getAll()) {
     while($orderrow = $orders->fetch_assoc()) {
-      printf('["%s", "%d", "%s", "%s", "%s", "%s"],', "", 
-        $orderrow["orderid"], $orderrow["state"],
+      printf('["%s", "<a href=\"/View/modify_order.php?orderid=%s\">%s</a>", "%s", "%s", "%s", "%s"],', "", 
+        $orderrow["orderid"], $orderrow["orderid"], 
+        $orderbo->getStatusInString($orderrow["state"]),
         $orderrow["seller"], $orderrow["buyer"],
         $orderrow["total"] + "원");
     }
   }
 ?>
       ];
+      var type =
+<?php
+  printf('"%s"', $_SESSION['type']);
+?>
+      ;
       var CurrentMenu = "manage_order";
       $("#" + CurrentMenu).addClass("active");
       printTable(header, data);
+      refreshMenu(type);
     </script>
   </body>
 </html>

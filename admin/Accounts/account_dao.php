@@ -24,6 +24,7 @@
           $ID, $PW, $email, $name, $phonenum, $zipcode,
           $address1, $address2);
     }
+
     function insert($account) {
       $account = $this->escape($account);
       $query = 
@@ -41,18 +42,6 @@
             $account->getAccounttype());
       return $GLOBALS['sqlinterface']->Query($query);
     }
-    function selectAll() {
-      $query = sprintf("SELECT * FROM Accounts");
-      return $GLOBALS['sqlinterface']->Query($query);
-    }
-    function selectByID($ID) {
-      $ID = $GLOBALS['sqlinterface']->Escape($ID);
-      $query = 
-        sprintf(
-          "SELECT * FROM Accounts WHERE
-            ID='%s'", $ID);
-      return $GLOBALS['sqlinterface']->Query($query);
-    }
     function insertSeller($account, $businessnumber, $bankaccount) {
       $GLOBALS['sqlinterface']->BeginTransaction();
       if($this->insert($account))
@@ -65,6 +54,72 @@
           $GLOBALS['sqlinterface']->RollbackTransaction();
       else
         $GLOBALS['sqlinterface']->RollbackTransaction();
+    }
+    
+    function update($account) {
+      $account = $this->escape($account);
+      if($account->getPW()){
+        $query = 
+          sprintf(
+            "UPDATE Accounts 
+            SET PW='%s', email='%s', phonenum='%s', zipcode='%s',
+            address1='%s', address2='%s'
+            WHERE ID='%s'",
+              $account->getPW(), $account->getEmail(),
+              $account->getPhonenum(), $account->getZipcode(),
+              $account->getAddress1(), $account->getAddress2(),
+              $account->getID());
+      }
+      else {
+        $query = 
+          sprintf(
+            "UPDATE Accounts 
+            SET email='%s', phonenum='%s', zipcode='%s',
+            address1='%s', address2='%s'
+            WHERE ID='%s'",
+              $account->getEmail(),
+              $account->getPhonenum(), $account->getZipcode(),
+              $account->getAddress1(), $account->getAddress2(),
+              $account->getID());
+      }
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+    function updateSeller($account, $businessnumber, $bankaccount) {
+      $GLOBALS['sqlinterface']->BeginTransaction();
+      if($this->update($account))
+        if($this->bankaccountdao->update($bankaccount))
+          if($this->businessnumberdao->update($businessnumber))
+            $GLOBALS['sqlinterface']->CommitTransaction();
+          else
+            $GLOBALS['sqlinterface']->RollbackTransaction();
+        else
+          $GLOBALS['sqlinterface']->RollbackTransaction();
+      else
+        $GLOBALS['sqlinterface']->RollbackTransaction();
+    }
+
+    function selectAll() {
+      $query = sprintf("SELECT * FROM Accounts");
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+    function selectByID($ID) {
+      $ID = $GLOBALS['sqlinterface']->Escape($ID);
+      $query = 
+        sprintf(
+          "SELECT * FROM Accounts WHERE
+            ID='%s'", $ID);
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+    function selectByIDJoin($ID) {
+      $ID = $GLOBALS['sqlinterface']->Escape($ID);
+      $query = 
+        sprintf(
+          "select Accounts.*, BankAccount.*, BusinessNumbers.* from
+            Accounts
+            left outer join BusinessNumbers on Accounts.ID = BusinessNumbers.ID
+            left outer join BankAccount on Accounts.ID = BankAccount.ID
+            WHERE Accounts.ID='%s'", $ID);
+      return $GLOBALS['sqlinterface']->Query($query);
     }
   }
 ?>

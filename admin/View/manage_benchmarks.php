@@ -19,7 +19,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">회원 정보 변경</a></li>
-            <li><a href="#">로그아웃</a></li>
+            <li><a href="/Accounts/logout.php">로그아웃</a></li>
           </ul>
         </div>
       </div>
@@ -29,7 +29,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li id="manage_member"><a href="/View/manage_members.php">회원 관리</a></li>
+            <li id="manage_accounts"><a href="/View/manage_accounts.php">회원 관리</a></li>
             <li id="manage_order"><a href="/View/manage_orders.php">주문 관리</a></li>
             <li id="manage_product"><a href="/View/manage_products.php">상품 관리</a></li>
             <li id="manage_benchmark"><a href="/View/manage_benchmarks.php">벤치마크 관리</a></li>
@@ -54,7 +54,7 @@
       var header = ["수정", "상품명", "리뷰어", "평균 속도 (MiB/s)", "최소 속도 (MiB/s)", "프리징 수치(%)"];
       var data = [
 <?php
-  require_once '../Accounts/login_required.php';
+  require_once '../Accounts/required_reviewer.php';
   require_once '../Benchmarks/benchmark_bo.php';
   $benchmarkbo = new BenchmarkBO();
   if($benchmarks = $benchmarkbo->getAll()) {
@@ -66,9 +66,15 @@
   }
 ?>
       ];
+      var type =
+<?php
+  printf('"%s"', $_SESSION['type']);
+?>
+      ;
       var CurrentMenu = "manage_benchmark";
       $("#" + CurrentMenu).addClass("active");
       printTable(header, data);
+      refreshMenu(type);
     </script>
   </body>
 </html>

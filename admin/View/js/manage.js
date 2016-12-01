@@ -17,3 +17,14 @@ function printTable(header, data) {
   }
   $("tbody").append(bodyhtml);
 }
+function hideIfNotSufficient(type, permittedtype, element) {
+  if(permittedtype.indexOf(type) == -1) {
+    $("#" + element).hide();
+  }
+}
+function refreshMenu(type) {
+  hideIfNotSufficient(type, ["admin"], "manage_accounts");
+  hideIfNotSufficient(type, ["seller", "admin"], "manage_order");
+  hideIfNotSufficient(type, ["seller", "admin"], "manage_product");
+  hideIfNotSufficient(type, ["reviewer", "admin"], "manage_benchmark");
+}
