@@ -17,7 +17,6 @@ $(document).ready(function(){
 		tmpHTML += '<input type="text" id="id" name="id" class="form-control" placeholder="ID">';
 		tmpHTML += '<input type="password" id="password" name="password" class="form-control" placeholder="Password">'
 		tmpHTML += '<button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>'
-		tmpHTML += '<button type="button" class="btn btn-lg btn-primary btn-block" onclick="location.href=\'../htm/signup.htm\'">회원가입</button>'
 		$('#div-signin').html(tmpHTML);
 	}
 	else{

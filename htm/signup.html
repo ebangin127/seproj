@@ -1,221 +1,166 @@
-<!DOCTYPE html>
-<!-- saved from url=(0049)http://d2d3qesrx8xj6s.cloudfront.net/iframe/a6nml -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="kr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>회원 가입</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./bootstrap.min(1).css" rel="stylesheet" id="bootstrap-css">
-    <style type="text/css">
-    @import "font-awesome.min.css";
-@import "font-awesome-ie7.min.css";
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
-}
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="css/signup.css"  rel="stylesheet">
+	<link href="css/shop-homepage.css" rel="stylesheet">
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  padding-bottom: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src='../js/bootstrap.js'></script>
+	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+	<script>
+		function findAddress() {
+			new daum.Postcode({
+				oncomplete: function(data) {
+					var fullAddr = '';
+					var extraAddr = '';
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+					if (data.userSelectedType === 'R') {
+						fullAddr = data.roadAddress;
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-.container-narrow > hr {
-  margin: 30px 0;
-}
+					} else {
+						fullAddr = data.jibunAddress;
+					}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
+					if(data.userSelectedType === 'R'){
+						if(data.bname !== ''){
+							extraAddr += data.bname;
+						}
+						if(data.buildingName !== ''){
+							extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+						}
+						fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+					}
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
+					document.getElementById('sample6_postcode').value = data.zonecode;
+					document.getElementById('address').value = fullAddr;
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
- }
- @media screen and (max-width:480px) {
-   #idcheck, #findaddress  {
-	 margin-bottom: 15px;
-   }
- }
- @media screen and (min-width:480px) {
-   #findaddress  {
-	 margin-bottom: 15px;
-   }
- }
-    </style>
-    
-    <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
-            else $('head > link').filter(':first').replaceWith(defaultCSS);
-        }
-        $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height());
-          window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
-        });
-    </script>
-</head>
-<body>
-	<div class="container">
-    <h1 class="well">회원 가입</h1>
-	<div class="col-lg-12 well">
-	<div class="row">
-		<form action="" method="post">
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="col-sm-8 form-group">
-						<label>ID</label>
-						<input type="text" placeholder="ID" name="id" class="form-control">
-					</div>
-					<div class="col-sm-4 form-group">
-						<label>중복 확인</label>
-						<input type="button" class="btn btn-primary col-xs-12" id="idcheck" value="확인">
-					</div>
-				</div>
-				<div class="form-group">
-					<label>비밀번호</label>
-					<input type="text" placeholder="비밀번호" name="password" class="form-control">
-				</div>
-				<input type="button" class="btn btn-primary col-xs-12" name="findaddress" id="findaddress" onclick="sample6_execDaumPostcode()" value="주소 검색">
-				<div class="row">
-					<div class="col-sm-4 form-group">
-						<label>우편 번호</label>
-						<input type="text" name="우편 번호" placeholder="Zip Code" class="form-control">
-					</div>
-					<div class="col-sm-4 form-group">
-						<label>주소</label>
-						<input type="text" name="address" placeholder="주소" class="form-control">
-					</div><div class="col-sm-4 form-group">
-						<label>상세 주소</label>
-						<input type="text" name="address2" placeholder="상세 주소" class="form-control">
-					</div>
-				</div>
-
-				<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-				<script>
-				    function sample6_execDaumPostcode() {
-				        new daum.Postcode({
-				            oncomplete: function(data) {
-				                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-				                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-				                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-				                var fullAddr = ''; // 최종 주소 변수
-				                var extraAddr = ''; // 조합형 주소 변수
-
-				                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-				                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-				                    fullAddr = data.roadAddress;
-
-				                } else { // 사용자가 지번 주소를 선택했을 경우(J)
-				                    fullAddr = data.jibunAddress;
-				                }
-
-				                // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-				                if(data.userSelectedType === 'R'){
-				                    //법정동명이 있을 경우 추가한다.
-				                    if(data.bname !== ''){
-				                        extraAddr += data.bname;
-				                    }
-				                    // 건물명이 있을 경우 추가한다.
-				                    if(data.buildingName !== ''){
-				                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-				                    }
-				                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-				                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
-				                }
-
-				                // 우편번호와 주소 정보를 해당 필드에 넣는다.
-				                document.getElementById('sample6_postcode').value = data.zonecode; //5자리 새우편번호 사용
-				                document.getElementById('address').value = fullAddr;
-
-				                // 커서를 상세주소 필드로 이동한다.
-				                document.getElementById('address2').focus();
-				            }
-				        }).open();
-				    }
-				</script>
-			<div class="form-group">
-				<label>이름</label>
-				<input type="text" placeholder="이름" name="name" class="form-control">
-			</div>
-			<div class="form-group">
-				<label>전화번호</label>
-				<input type="text" placeholder="전화번호" name="phonenum" class="form-control">
-			</div>
-			<div class="form-group">
-				<label>Email 주소</label>
-				<input type="text" placeholder="Email 주소" name="email" class="form-control">
-			</div>
-			<input type="submit" class="btn btn-primary" value ="제출"/>
-			</div>
-		</form>
-	</div>
-	</div>
-	</div>
-
-	<script type="text/javascript">
-
+					document.getElementById('address2').focus();
+				}
+			}).open();
+		}
 	</script>
 
+<body>
 
-</body></html>
+	<nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-dropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NFD</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-dropdown">
+                <ul class="nav navbar-nav">
+					<!-- 로그인 하면 나타날 내용들 마이페이지 같은 내용들?-->
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-login">
+					<li id="login_or_logout">
+						<a href="#">로그인</a>
+					</li>
+					<li id="login_or_logout">
+						<a href="#">회원 가입</a>
+					</li>
+				</ul>
+            </div>
+        </div>
+    </nav>
+
+	<div class="container">
+	    <h1 class="well">회원 가입</h1>
+		<div class="col-lg-12 well">
+			<div class="row">
+				<form action="" method="post">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-7 col-xs-8 form-group">
+								<label>ID</label>
+								<input type="text" placeholder="ID" name="id" class="form-control">
+							</div>
+							<div class="col-sm-5 col-xs-4 form-group">
+								<input type="button" class="btn btn-primary" id="idcheck" value="확인">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>비밀번호</label>
+							<input type="text" placeholder="비밀번호" name="password" class="form-control">
+						</div>
+
+						<hr />
+
+						<div class="row">
+							<div class="col-sm-4 col-xs-7 form-group">
+								<label>우편 번호</label>
+								<input type="text" name="우편 번호" placeholder="우편 번호" class="form-control">
+							</div>
+							<div class="col-sm-4 col-xs-5 form-group">
+								<input type="button" class="btn btn-primary" name="findaddress" id="findaddress" onclick="findAddress()" value="주소 검색" style="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label>주소</label>
+							<input type="text" name="address" placeholder="주소" class="form-control">
+						</div>
+
+						<div class="form-group">
+							<label>상세 주소</label>
+							<input type="text" name="address2" placeholder="상세 주소" class="form-control">
+						</div>
+
+						<hr/>
+
+						<div class="form-group">
+							<label>이름</label>
+							<input type="text" placeholder="이름" name="name" class="form-control">
+						</div>
+
+						<div class="form-group">
+							<label>전화번호</label>
+							<input type="text" placeholder="전화번호" name="phonenum" class="form-control">
+						</div>
+
+						<div class="form-group">
+							<label>Email 주소</label>
+							<input type="text" placeholder="Email 주소" name="email" class="form-control">
+						</div>
+
+						<hr />
+
+						<input type="submit" class="btn btn-primary" value ="제출"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+        <hr>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>SoftWare Engineering Group C</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

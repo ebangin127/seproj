@@ -1,0 +1,66 @@
+<html lang="kr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>로그인</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+	<link href="css/shop-homepage.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src='../js/login.js'></script>
+    <script src='../js/jquery.session.js'></script>
+    <script src='../js/index.js'></script>
+	<script src='../js/bootstrap.js'></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-dropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NFD</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-dropdown">
+                <ul class="nav navbar-nav">
+					<!-- 로그인 하면 나타날 내용들 마이페이지 같은 내용들?-->
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-login" id="login_or_logout">
+					<li id="login_or_logout">
+						<a href="#">로그인</a>
+					</li>
+					<li id="login_or_logout">
+						<a href="#">회원 가입</a>
+					</li>
+				</ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="form-signin-heading">Welcome to NFD!!</h2>
+        <form action="../php/login_do.php" method="post" class="form-signin" id="form-signin">
+            <div id="div-signin"></div>
+        </form>
+	</div>
+</body>
+
+</html>

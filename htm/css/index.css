@@ -1,0 +1,6 @@
+.navbar {border-radius:0px;}
+
+.navbar-login {float:right;}
+ @media screen and (max-width:425px) {
+	 .navbar-login {float:left;}
+ }
