@@ -13,7 +13,7 @@
         return $result;
     }
     function getAll() {
-      return $this->orderdao->selectAll();
+      return $this->orderdao->selectAll($_SESSION["type"], $_SESSION['id']);
     }
     function getStatusInString($original) {
       switch($original) {

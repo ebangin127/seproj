@@ -48,7 +48,7 @@
               </tbody>
             </table>
           </div>
-          <p style="text-align:right"><a href="/View/add_product.php" target="_blank">상품 추가</a></p>
+          <p style="text-align:right"><a href="/View/add_process.php" target="_blank">상품 추가</a></p>
         </div>
       </div>
     </div>
@@ -61,9 +61,10 @@
   $productbo = new ProductBO();
   if($products = $productbo->getAll()) {
     while($productrow = $products->fetch_assoc()) {
-      printf('["%s", "%s", "%s", "%s", "%s"],', "", 
-        $productrow["productid"], $productrow["productname"],
-        $productrow["price"] + "원", $productrow["seller"]);
+      printf('["%s", "<a href=\"/View/modify_product.php?productid=%s\">%s</a>", "%s", "%s", "%s"],', "", 
+        $productrow["productid"], $productrow["productid"],
+        $productrow["productname"], $productrow["price"] + "원",
+        $productrow["seller"]);
     }
   }
 ?>

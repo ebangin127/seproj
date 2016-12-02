@@ -16,7 +16,7 @@
     <script>tinymce.init({ selector:'textarea' });</script>
   </head>
   <body>
-    <form name="newproduct" action=/Products/add_product.php method=post onsubmit="return OnSubmitEvent();">
+    <form name="newproduct" action=/Products/add_process.php method=post onsubmit="return OnSubmitEvent();">
       <div class="container-fluid">
         <section class="container">
           <div class="container-page">        
@@ -44,7 +44,7 @@
 
             <div class="form-group row">
               <div class="row-sm-offset-2">
-                <button type="submit" class="btn btn-primary col-md-12">가입 신청</button>
+                <button type="submit" class="btn btn-primary col-md-12">등록</button>
               </div>
             </div>
           </div>

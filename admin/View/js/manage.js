@@ -7,7 +7,7 @@ function printTable(header, data) {
   headhtml += "</tr>";
   $("thead").append(headhtml);
 
-  var bodyhtml = $("thead");
+  var bodyhtml = $("tbody");
   for(outerindex in data) {
     bodyhtml += "<tr>";
     for(innerindex in data[outerindex]) {

@@ -52,7 +52,7 @@ function validateConfirmOne($lhsformid, $rhsformid, $formhumanname) {
 function validateConfirmPassword() {
   return validateConfirmOne("pw", "pw_confirm", "비밀번호");
 }
-function validateConfirmPassword() {
+function validateConfirmEmail() {
   return validateConfirmOne("email", "email_confirm", "이메일 주소");
 }
 function validateConfirm() {

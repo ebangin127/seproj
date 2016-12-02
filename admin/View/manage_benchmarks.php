@@ -45,13 +45,13 @@
               </tbody>
             </table>
           </div>
-          <p style="text-align:right"><a href="#">벤치마크 추가</a></p>
+          <p style="text-align:right"><a href="/View/add_benchmark.php" target="_blank">벤치마크 추가</a></p>
         </div>
       </div>
     </div>
     <script src="js/manage.js"></script>
     <script>
-      var header = ["수정", "상품명", "리뷰어", "평균 속도 (MiB/s)", "최소 속도 (MiB/s)", "프리징 수치(%)"];
+      var header = ["수정", "상품명", "리뷰어", "평균 속도 (MiB/s)", "최소 속도 (MiB/s)", "프리징 수치 (%)"];
       var data = [
 <?php
   require_once '../Accounts/required_reviewer.php';

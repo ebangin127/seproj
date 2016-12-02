@@ -96,7 +96,7 @@
       $accountbo->register($account);
     }
   }
-  printf("%s", "<script>self.opener = self; window.close();</script>");
+  printf("%s", "<script>opener.location.reload(); self.opener = self; window.close();</script>");
 ?>
   </body>
 </html>

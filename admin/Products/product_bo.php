@@ -8,8 +8,25 @@
     function add($product) {
       return $this->productdao->insert($product);
     }
+    function modify($ID, $product) {
+      return $this->productdao->update($ID, $product);
+    }
+    function findID($ID) {
+      $result = $this->productdao->selectByID($ID);
+      if(!$result)
+        return 0;
+      else
+        return $result;
+    }
+    function findProduct($name) {
+      $result = $this->productdao->selectByName($name);
+      if(!$result)
+        return 0;
+      else
+        return $result;
+    }
     function getAll() {
-      return $this->productdao->selectAll();
+      return $this->productdao->selectAll($_SESSION["type"], $_SESSION['id']);
     }
   }
 ?>

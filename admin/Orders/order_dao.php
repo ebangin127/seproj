@@ -9,8 +9,15 @@
             orderid=%s", $OrderID);
       return $GLOBALS['sqlinterface']->Query($query);
     }
-    function selectAll() {
-      $query = sprintf("SELECT Orders.*, sum(price*qty) as total from Orders, OrderProducts group by Orders.orderid;");
+    function selectAll($type, $id) {
+      $scope = "";
+      if($type != "admin")
+        $scope .= sprintf(" WHERE Orders.seller='%s'", $id);
+      $query = sprintf(
+        "SELECT Orders.*, sum(price*qty) 
+        AS total 
+        FROM Orders, OrderProducts %s
+        GROUP BY Orders.orderid", $scope);
       return $GLOBALS['sqlinterface']->Query($query);
     }
     function updateTrackingNumber($OrderID, $ShippingMethod, $TrackingNumber) {

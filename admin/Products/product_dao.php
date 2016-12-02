@@ -26,8 +26,41 @@
       return $GLOBALS['sqlinterface']->Query($query);
     }
 
-    function selectAll() {
-      $query = sprintf("SELECT * FROM Products");
+    function update($ID, $product) {
+      $ID = $GLOBALS['sqlinterface']->Escape($ID);
+      $product = $this->Escape($product);
+      $query = 
+        sprintf(
+          "UPDATE Products 
+            SET productname='%s', price=%s, imageurl='%s', description='%s'
+            WHERE productid=%s",
+            $product->getProductName(), $product->getPrice(),
+            $product->getImageURL(), $product->getDescription(),
+            $ID, $product->getSeller());
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+
+    function selectByID($ID) {
+      $ID = $GLOBALS['sqlinterface']->Escape($ID);
+      $query = 
+        sprintf(
+          "SELECT * FROM Products WHERE
+            productid=%s", $ID);
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+    function selectByName($name) {
+      $name = $GLOBALS['sqlinterface']->Escape($name);
+      $query = 
+        sprintf(
+          "SELECT * FROM Products WHERE
+            productname LIKE '%%%s%%'", $name);
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+    function selectAll($type, $id) {
+      $scope = "";
+      if($type != "admin")
+        $scope .= sprintf(" WHERE Products.seller='%s'", $id);
+      $query = sprintf("SELECT * FROM Products %s", $scope);
       return $GLOBALS['sqlinterface']->Query($query);
     }
   }

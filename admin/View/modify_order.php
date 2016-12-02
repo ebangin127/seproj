@@ -154,9 +154,7 @@
               $orderrow["shipmethod4returning"],
               $orderrow["trackno4returning"]);
         else
-          printf('["반품/교환 업체",""],
-              ["반품/교환 송장",""]
-            ]');
+          printf(']');
       }
     }
   ?>
