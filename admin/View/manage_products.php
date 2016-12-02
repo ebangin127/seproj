@@ -48,21 +48,21 @@
               </tbody>
             </table>
           </div>
-          <p style="text-align:right"><a href="/View/add_process.php" target="_blank">상품 추가</a></p>
+          <p style="text-align:right"><a href="/View/add_product.php" target="_blank">상품 추가</a></p>
         </div>
       </div>
     </div>
     <script src="js/manage.js"></script>
     <script>
-      var header = ["수정", "상품 번호", "상품명", "가격", "판매자 ID"];
+      var header = ["삭제", "상품 번호 (수정)", "상품명", "가격", "판매자 ID"];
       var data = [
 <?php
   require_once '../Products/product_bo.php';
   $productbo = new ProductBO();
   if($products = $productbo->getAll()) {
     while($productrow = $products->fetch_assoc()) {
-      printf('["%s", "<a href=\"/View/modify_product.php?productid=%s\">%s</a>", "%s", "%s", "%s"],', "", 
-        $productrow["productid"], $productrow["productid"],
+      printf('["<a href=\"/Products/delete_process.php?productid=%s\">삭제</a>", "<a href=\"/View/modify_product.php?productid=%s\">%s</a>", "%s", "%s", "%s"],',  
+        $productrow["productid"], $productrow["productid"], $productrow["productid"],
         $productrow["productname"], $productrow["price"] + "원",
         $productrow["seller"]);
     }

@@ -59,8 +59,8 @@
   $benchmarkbo = new BenchmarkBO();
   if($benchmarks = $benchmarkbo->getAll()) {
     while($benchmarkrow = $benchmarks->fetch_assoc()) {
-      printf('["%s", "%s", "%s", "%s", "%s", "%s"],', "", 
-        $benchmarkrow["productname"], $benchmarkrow["reviewer"],
+      printf('["%s", "<a href=\"/View/modify_benchmark.php?benchmarkid=%s\">%s</a>", "%s", "%s", "%s", "%s"],', "", 
+        $benchmarkrow["benchmarkid"], $benchmarkrow["productname"], $benchmarkrow["reviewer"],
         $benchmarkrow["avgval"], $benchmarkrow["minval"], $benchmarkrow["freezingval"]);
     }
   }

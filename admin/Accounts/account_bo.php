@@ -17,6 +17,9 @@
     function modifySeller($account, $businessnumber, $bankaccount) {
       $this->accountdao->updateSeller($account, $businessnumber, $bankaccount);
     }
+    function delete($ID) {
+      return $this->accountdao->delete($ID);
+    }
     function getAll() {
       return $this->accountdao->selectAll();
     }

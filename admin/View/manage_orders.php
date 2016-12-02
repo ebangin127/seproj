@@ -53,14 +53,14 @@
     </div>
     <script src="js/manage.js"></script>
     <script>
-      var header = ["수정", "주문 번호", "주문 상태", "판매자", "구매자", "총 구매 가격"];
+      var header = ["주문 번호", "주문 상태", "판매자", "구매자", "총 구매 가격"];
       var data = [
 <?php
   require_once '../Orders/order_bo.php';
   $orderbo = new OrderBO();
   if($orders = $orderbo->getAll()) {
     while($orderrow = $orders->fetch_assoc()) {
-      printf('["%s", "<a href=\"/View/modify_order.php?orderid=%s\">%s</a>", "%s", "%s", "%s", "%s"],', "", 
+      printf('["<a href=\"/View/modify_order.php?orderid=%s\">%s</a>", "%s", "%s", "%s", "%s"],',
         $orderrow["orderid"], $orderrow["orderid"], 
         $orderbo->getStatusInString($orderrow["state"]),
         $orderrow["seller"], $orderrow["buyer"],

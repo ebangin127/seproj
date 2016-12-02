@@ -13,26 +13,13 @@
   <body>
 <?php
   function CheckForm() {
-    return
-      (isset($_POST['productname'])) &&
-      (isset($_POST['price']));
-  }
-  function BuildProductObject() {
-    require_once '../Products/product_vo.php';
-    session_start();
-    return new ProductVO(
-      $_SESSION['id'],
-      $_POST['productname'],
-      $_POST['price'],
-      $_POST['imageurl'],
-      $_POST['description']);
+    return (isset($_GET['benchmarkid']));
   }
 
   if(CheckForm()) {
-    require_once '../Products/product_bo.php';
-    $productbo = new ProductBO();
-    $product = BuildProductObject();
-    $productbo->modify($_POST['productid'], $product);
+    require_once '../Benchmarks/benchmark_bo.php';
+    $benchmarkbo = new BenchmarkBO();
+    $benchmarkbo->delete($_GET['benchmarkid']);
   }
   printf("<script>window.location.href = '%s';</script>", $_SERVER['HTTP_REFERER']);
 ?>

@@ -26,6 +26,15 @@
       return $GLOBALS['sqlinterface']->Query($query);
     }
 
+    function delete($ID) {
+      $ID = $GLOBALS['sqlinterface']->Escape($ID);
+      $query = 
+        sprintf(
+          "DELETE FROM Products WHERE
+            productid=%s", $ID);
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+
     function update($ID, $product) {
       $ID = $GLOBALS['sqlinterface']->Escape($ID);
       $product = $this->Escape($product);
@@ -37,6 +46,7 @@
             $product->getProductName(), $product->getPrice(),
             $product->getImageURL(), $product->getDescription(),
             $ID, $product->getSeller());
+      printf("%s",$query);
       return $GLOBALS['sqlinterface']->Query($query);
     }
 

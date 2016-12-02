@@ -98,6 +98,12 @@
         $GLOBALS['sqlinterface']->RollbackTransaction();
     }
 
+    function delete($ID) {
+      $ID = $this->escape($ID);
+      $query = sprintf("DELETE FROM Accounts WHERE id='%s'", $ID);
+      return $GLOBALS['sqlinterface']->Query($query);
+    }
+
     function selectAll() {
       $query = sprintf("SELECT * FROM Accounts");
       return $GLOBALS['sqlinterface']->Query($query);

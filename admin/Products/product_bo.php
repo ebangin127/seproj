@@ -11,6 +11,9 @@
     function modify($ID, $product) {
       return $this->productdao->update($ID, $product);
     }
+    function delete($ID) {
+      return $this->productdao->delete($ID);
+    }
     function findID($ID) {
       $result = $this->productdao->selectByID($ID);
       if(!$result)

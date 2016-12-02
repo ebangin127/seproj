@@ -14,27 +14,34 @@
 <?php
   function CheckForm() {
     return
-      (isset($_POST['productname'])) &&
-      (isset($_POST['price']));
+      (isset($_POST['benchmarkid'])) &&
+      (isset($_POST['imageurl'])) &&
+      (isset($_POST['maxval'])) &&
+      (isset($_POST['minval'])) &&
+      (isset($_POST['avgval'])) &&
+      (isset($_POST['freezingval']));
   }
-  function BuildProductObject() {
-    require_once '../Products/product_vo.php';
+  function BuildBenchmarkObject() {
+    require_once '../Benchmarks/benchmark_vo.php';
     session_start();
-    return new ProductVO(
+    return new BenchmarkVO(
       $_SESSION['id'],
-      $_POST['productname'],
-      $_POST['price'],
+      "",
       $_POST['imageurl'],
-      $_POST['description']);
+      $_POST['maxval'],
+      $_POST['minval'],
+      $_POST['avgval'],
+      $_POST['freezingval']);
   }
 
   if(CheckForm()) {
-    require_once '../Products/product_bo.php';
-    $productbo = new ProductBO();
-    $product = BuildProductObject();
-    $productbo->modify($_POST['productid'], $product);
+    require_once '../Benchmarks/benchmark_bo.php';
+    $benchmarkbo = new BenchmarkBO();
+    $benchmark = BuildBenchmarkObject();
+    $benchmarkbo->modify($_POST['benchmarkid'], $benchmark);
   }
   printf("<script>window.location.href = '%s';</script>", $_SERVER['HTTP_REFERER']);
+
 ?>
   </body>
 </html>
