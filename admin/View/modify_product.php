@@ -1,5 +1,5 @@
 <?php
-  require_once '../Accounts/required_selleronly.php';
+  require_once '../Accounts/required_seller.php';
 ?>
 <html>
   <head>

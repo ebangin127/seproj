@@ -1,3 +1,6 @@
+<?php
+  require_once '../Accounts/required_revieweronly.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>

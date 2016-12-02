@@ -51,7 +51,7 @@
     </div>
     <script src="js/manage.js"></script>
     <script>
-      var header = ["수정", "상품명", "리뷰어", "평균 속도 (MiB/s)", "최소 속도 (MiB/s)", "프리징 수치 (%)"];
+      var header = ["삭제", "벤치마크 번호 (수정)", "상품명", "리뷰어", "평균 속도 (MiB/s)", "최소 속도 (MiB/s)", "프리징 수치 (%)"];
       var data = [
 <?php
   require_once '../Accounts/required_reviewer.php';
@@ -59,9 +59,9 @@
   $benchmarkbo = new BenchmarkBO();
   if($benchmarks = $benchmarkbo->getAll()) {
     while($benchmarkrow = $benchmarks->fetch_assoc()) {
-      printf('["%s", "<a href=\"/View/modify_benchmark.php?benchmarkid=%s\">%s</a>", "%s", "%s", "%s", "%s"],', "", 
-        $benchmarkrow["benchmarkid"], $benchmarkrow["productname"], $benchmarkrow["reviewer"],
-        $benchmarkrow["avgval"], $benchmarkrow["minval"], $benchmarkrow["freezingval"]);
+      printf('["<a href=\"/Benchmarks/delete_process.php?benchmarkid=%s\">삭제</a>", "<a href=\"/View/modify_benchmark.php?benchmarkid=%s\">%s</a>", "%s", "%s", "%s", "%s", "%s"],', 
+        $benchmarkrow["benchmarkid"],  $benchmarkrow["benchmarkid"], $benchmarkrow["benchmarkid"],$benchmarkrow["productname"],
+        $benchmarkrow["reviewer"], $benchmarkrow["avgval"], $benchmarkrow["minval"], $benchmarkrow["freezingval"]);
     }
   }
 ?>

@@ -1,3 +1,6 @@
+<?php
+  require_once '../Accounts/required_selleronly.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
