@@ -1,29 +1,34 @@
 <?php
-	require 'sql.php'
-	$buyer = $_POST['buyer']			// buyer id
-	$productid = $_POST['productid']
-	$db = mysqli_connect("box708.bluehost.com", "naraeonn_se", "vG,:B2\"*7rp4RUe,", "naraeonn_se");
-
 	function addCart(){
-		$qty = $_POST['qty']
-		$result = mysqli_query($connection, $addCart_sql);
-
+		require 'sql.php';
+		$buyer = $_POST['buyer'];			// buyer id
+		$productid = $_POST['productid'];
+		$qty = $_POST['qty'];
+		$result = sqlAddcart($buyer, $productid, $qty);
 		if($result){
-			echo "<script> alert('추가되었습니다.'); history.go(-1); </script>";
+			echo true;
 		}
 		else{
-			// error
+			echo false;
 		}
 	}
 
 	function delCart(){
-		$result = mysqli_query($connection, $delCart_sql);
-
+		require 'sql.php';
+		$buyer = $_POST['buyer'];			// buyer id
+		$productid = $_POST['productid'];
+		$result = sqlDelcart($buyer, $productid);
 		if($result){
-			echo "<script> alert('삭제되었습니다.'); history.go(-1); </script>";
+			echo "true";
 		}
 		else{
-			// error
+			echo "false";
 		}
 	}
-}?>
+
+	$flag = $_GET['flag'];
+	if($flag == 0)
+		addCart();
+	else
+		delCart();
+?>

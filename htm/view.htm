@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../js/view.js"></script>
+		<script src='../js/jquery.session.js'></script>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<h1 id="h1">상품</h1>
+			<div id="content">
+			</div>
+			<table class="table table-striped">
+				<thead>
+					<tr class="hidden-sm hidden-xs">
+						<th>Reviewer</th>
+						<th>imageurl</th>
+						<th>maxval</th>
+						<th>minval</th>
+						<th>avgval</th>
+						<th>freezingval</th>
+					</tr>
+				</thead>
+				<tbody id="tbody"></tbody>
+			</table>
+			<button type="button" class="btn btn-default" onclick="location.href='product.htm'">상품 목록</button>
+			<button type="button" class="btn btn-default" id="addCart">카트에 추가</button>
+			<button type="button" class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#myModal" id="modalBtn">Open Modal</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">NFD</h4>
+						</div>
+						<div class="modal-body">
+							<p>카트에 추가되었습니다. 카트를 확인하시겠습니까?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="location.href='mycart.htm'">확인</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  	</body>
+</html>

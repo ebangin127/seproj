@@ -26,10 +26,35 @@
 		return $result;
 	}
 
+	function sqlProductView($productid){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$productView_sql = "SELECT * FROM Products WHERE productid = $productid";
+		$result = mysqli_query($db, $productView_sql);
+		return $result;
+	}
+
+	function sqlBenchmarkData($productid){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$benchmarkData_sql = "SELECT * FROM Benchmarks WHERE productid = $productid";
+		$result = mysqli_query($db, $benchmarkData_sql);
+		return $result;
+	}
+
 	function sqlAddcart($buyer, $productid, $qty){
 		$db = mysqli_connect("localhost", "root", "", "test");
-		$addCart_sql = "INSERT INTO Cart (buyer, productid, qty) VALUES ('$buyer, $productid, $qty')";
+		$addCart_sql = "INSERT INTO Cart (buyer, productid, qty) VALUES ('$buyer', $productid, $qty)
+						ON DUPLICATE KEY UPDATE qty = VALUES(qty) + qty";
 		$result = mysqli_query($db, $addCart_sql);
+		if($result)
+			return $result;
+		else
+			return $addCart_sql;
+	}
+
+	function sqlDelcart($buyer, $productid){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$delCart_sql = "DELETE FROM Cart WHERE buyer = '$buyer' AND productid = $productid)";
+		$result = mysqli_query($db, $delCart_sql);
 		return $result;
 	}
 

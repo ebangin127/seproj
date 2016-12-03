@@ -18,3 +18,9 @@ function isLogined(){
 	else
 		return false;
 }
+
+function logout(){
+	$.session.remove('user_id');
+	alert('로그아웃되었습니다.');
+	$(location).attr('href', 'index.html');
+}

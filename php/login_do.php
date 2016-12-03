@@ -12,6 +12,6 @@
 	else{
 		echo "<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>";
 		echo "<script src='../js/jquery.session.js'></script>";
-		echo "<script> $.session.set('user_id', '$ID'); alert('로그인되었습니다.'); history.go(-1);</script>";
+		echo "<script> $.session.set('user_id', '$ID'); alert('로그인되었습니다.'); $(location).attr('href', '../htm/index.html');</script>";
 	}
 ?>
