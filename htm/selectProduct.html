@@ -1,0 +1,129 @@
+<html lang="kr">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>NFD</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/selectProduct.css" rel="stylesheet">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="../js/jquery.session.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/nav_bar.js"></script>
+		<script src="../js/view.js"></script>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-dropdown">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">NFD</a>
+				</div>
+				<div class="collapse navbar-collapse" id="nav-dropdown">
+					<ul class="nav navbar-nav" id="product">
+						<li>
+							<a href="#">상품</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-login" id="Logined"></ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="thumbnail">
+				<img class="img-responsive" id="image">
+
+				<div class="caption-full">
+					<h4 class="pull-right" id="price"></h4>
+					<h4 id="name"></h4>
+					판매자명 :
+					<span id="seller"></span><br>
+					<span>상품 설명 : </span>
+					<span id="description"></span>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="span12">
+							<table class="table table-condensed table-hover">
+								<thead>
+									<tr>
+										<th>리뷰어</th>
+										<th>최소 속도</th>
+										<th>평균 속도</th>
+										<th>최대 속도</th>
+										<th>프리징 수치</th>
+										<th>그래프 이미지</th>
+									</tr>
+								</thead>
+								<tbody id="tbody">
+									
+								</tbody>
+								<tr>
+										<td></td>
+										<td colspan="6" style="text-align:right">
+											단위 : 속도(MiB/s) / 프리징 수치(%)
+										</td>
+									</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="btns">
+					<button type="button" class="btn btn-default btn-sm" id="addCart">
+          				<span class="glyphicon glyphicon-shopping-cart"></span><strong>카트에 넣기</strong>
+        			</button>
+					<button type="button" class="btn btn-default btn-sm" onclick="$(location).attr('href','index.html')">
+          				<span class="glyphicon glyphicon-th-list"></span><strong>목록으로</strong>
+        			</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="container">
+				<hr>
+				<footer>
+					<div class="row">
+						<div class="col-lg-12">
+							<p>SoftWare Engineering Group C</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- Modal -->
+		<button type="button" class="btn btn-info btn-lg hide" data-toggle="modal" data-target="#myModal" id="modalBtn">Open Modal</button>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">NFD</h4>
+					</div>
+					<div class="modal-body">
+						<p>카트에 추가되었습니다. 카트를 확인하시겠습니까?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="location.href='mycart.htm'">확인</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

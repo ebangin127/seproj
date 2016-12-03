@@ -19,8 +19,13 @@ $(document).ready(function() {
 		url:'../php/productView.php?pid='+pid,
 		success:function(data){
 			var temp = data.split("?");
-			$("#content").html(temp[0]);
-			$("#tbody").html(temp[1]);
+			$("#seller").html(temp[1]);
+			$("#seller").html(temp[1]);
+			$("#name").html(temp[2]);
+			$("#price").html(temp[3]+"원");
+			//$("#image").attr("src", "../public/images/"+temp[4]);
+			$("#description").html(temp[5]);
+			$("#tbody").html(temp[6]);
 		}
 	});
 
