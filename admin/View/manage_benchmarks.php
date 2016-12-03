@@ -18,7 +18,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">회원 정보 변경</a></li>
+            <li><a href="/View/modify_account.php">회원 정보 변경</a></li>
             <li><a href="/Accounts/logout.php">로그아웃</a></li>
           </ul>
         </div>
@@ -45,7 +45,7 @@
               </tbody>
             </table>
           </div>
-          <p style="text-align:right"><a href="/View/add_benchmark.php" target="_blank">벤치마크 추가</a></p>
+          <p id="add" style="text-align:right"><a href="/View/add_benchmark.php" target="_blank">벤치마크 추가</a></p>
         </div>
       </div>
     </div>
@@ -75,6 +75,7 @@
       $("#" + CurrentMenu).addClass("active");
       printTable(header, data);
       refreshMenu(type);
+      hideIfNotSufficient(type, ["reviewer"], "add");
     </script>
   </body>
 </html>

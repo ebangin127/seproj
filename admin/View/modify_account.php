@@ -1,5 +1,5 @@
 <?php
-  require_once '../Accounts/required_admin.php';
+  require_once '../Accounts/required_login.php';
 ?>
 <html>
   <head>
@@ -23,7 +23,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">회원 정보 변경</a></li>
+            <li><a href="/View/modify_account.php">회원 정보 변경</a></li>
             <li><a href="/Accounts/logout.php">로그아웃</a></li>
           </ul>
         </div>
@@ -41,7 +41,7 @@
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">회원 정보 변경 (관리자)</h1>
+          <h1 class="page-header">회원 정보 변경</h1>
           <form name="register" action=/Accounts/modify_process_admin.php method=post onsubmit="return OnSubmitEvent();">
             <div class="container-fluid">
               <section class="container col-md-12">
@@ -160,7 +160,7 @@
   <?php
     require_once '../Accounts/account_bo.php';
     $accountbo = new AccountBO();
-    if($accounts = $accountbo->getIDAggregated($_GET["id"])) {
+    if($accounts = $accountbo->getIDAggregated($_SESSION["id"])) {
       if($accountrow = $accounts->fetch_assoc()) {
         printf('"ID":"%s",
           "name":"%s",
@@ -173,7 +173,7 @@
           "BusinessNumber":"%s",
           "bankcode":"%s",
           "accountnum":"%s"',  
-            $_GET["id"], $accountrow["name"],
+            $_SESSION["id"], $accountrow["name"],
             $accountrow["email"], $accountrow["phonenum"],
             $accountrow["zipcode"], $accountrow["address1"],
             $accountrow["address2"], $accountrow["type"],
@@ -188,7 +188,7 @@
     printf('"%s"', $_SESSION['type']);
   ?>
       ;
-      var CurrentMenu = "manage_accounts";
+      var CurrentMenu = "";
       $("#" + CurrentMenu).addClass("active");
       fillForm(data);
       refreshMenu(type);
