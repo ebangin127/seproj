@@ -86,4 +86,57 @@
 		$result = mysqli_query($db, $mycart_sql);
 		return $result;
 	}
+
+	function sqlAddorder($seller, $buyer, $name, $phonenum, $zipcode, $address1, $address2){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$addOrder_sql = "INSERT INTO Orders (state, seller, buyer, name, phonenum, zipcode, address1, address2, trackno4sending, trackno4returning, shipmethod4sending, shipmethod4returning) 
+						 VALUES ('preparingship', '$seller', '$buyer', '$name', '$phonenum', '$zipcode', '$address1', '$address2', '1', '1', 'cj', 'cj')";
+		$result = mysqli_query($db, $addOrder_sql);
+		$sql = "SELECT orderid FROM Orders ORDER BY orderid DESC";
+		$result = mysqli_query($db, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row['orderid'];
+	}
+
+	function sqlFindorder($orderid){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$findOrder_sql = "SELECT * FROM Orders WHERE orderid = $orderid";
+		$result = mysqli_query($db, $findOrder_sql);
+		return $result;
+	}
+	
+	function sqlMyOrder($ID){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$findOrder_sql = "SELECT Orders.orderid, Products.productname, Products.seller, Orders.shipmethod4sending, Orders.trackno4sending
+						  FROM Orders INNER JOIN OrderProducts ON OrderProducts.orderid = Orders.orderid 
+						  INNER JOIN Products ON OrderProducts.productid = Products.productid WHERE Orders.buyer = '$ID'";
+		$result = mysqli_query($db, $findOrder_sql);
+		return $result;	
+	}
+
+	function sqltrunMycart($ID){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$mycart_sql = "DELETE FROM Cart WHERE buyer = '$ID'";
+		$result = mysqli_query($db, $mycart_sql);
+		return $result;	
+	}
+
+	function sqlAddop($orderid, $productid, $price, $qty){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$addOP_sql = "INSERT INTO OrderProducts (orderid, productid, price, qty) VALUES ($orderid, $productid, $price, $qty)";
+		$result = mysqli_query($db, $addOP_sql);
+		return $result;	
+	}
+
+	function sqlER($flag, $orderid, $trackingnum, $ship){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		if($flag == 0){
+			$reqER_sql = "UPDATE Orders SET state='refundwaiting', trackno4returning='$trackingnum', shipmethod4returning='$ship' WHERE orderid = $orderid";
+		}
+		if($flag == 1){
+			$reqER_sql = "UPDATE Orders SET state='exchangewaiting', trackno4returning='$trackingnum', shipmethod4returning='$ship' WHERE orderid = $orderid";
+		}
+		$result = mysqli_query($db, $reqER_sql);
+		return $result;
+	}
 ?>

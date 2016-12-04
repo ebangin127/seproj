@@ -23,35 +23,35 @@
 <body>
 
 	<nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-dropdown">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="initialPage.html">NFD</a>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-dropdown">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">NFD</a>
 			</div>
 			<div class="collapse navbar-collapse" id="nav-dropdown">
 				<ul class="nav navbar-nav" id="product">
 					<li>
-						<a href="index.html">상품</a>
+						<a href="initialPage.html">상품</a>
 					</li>
 					<li>
-						<a href="#">고객 센터</a>
+						<a href="contact.html">고객 센터</a>
 					</li>
-                </ul>
-                <ul class="nav navbar-nav navbar-login" id="Logined">
 				</ul>
-            </div>
-        </div>
-    </nav>
+				<ul class="nav navbar-nav navbar-login" id="Logined">
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<div class="container">
-		<div>
+		<div >
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4><strong>사용자 정보</strong></h4>
+					<h4>사용자 정보</h4>
 				</div>
 				<div class="panel-body">
 					<div class="box box-info">
@@ -62,32 +62,32 @@
 								<br>
 							</div>
 							<div class="col-sm-6">
-								<h4 style="color:#000;" id="name">이름</h4>
+								<h4 style="color:#000;" id="name"></h4>
 								</span>
 								<span><p>등급 : 구매자</p></span>
 							</div>
 							<div class="clearfix"></div>
 							<hr style="margin:5px 0 5px 0;">
 
-							<div class="col-sm-5 col-xs-6 tital" id="id">ID:</div>
+							<div class="col-sm-5 col-xs-6 tital" id="id">ID : </div>
 							<div class="col-sm-7"></div>
 
 							<div class="clearfix"></div>
 							<div class="bot-border"></div>
 
-							<div class="col-sm-5 col-xs-6 tital" id="address">주소:</div>
+							<div class="col-sm-5 col-xs-6 tital" id="address">주소 : </div>
 							<div class="col-sm-7"></div>
 
 							<div class="clearfix"></div>
 							<div class="bot-border"></div>
 
-							<div class="col-sm-5 col-xs-6 tital" id="phonenum">전화번호:</div>
+							<div class="col-sm-5 col-xs-6 tital" id="phonenum">전화번호 : </div>
 							<div class="col-sm-7"></div>
 
 							<div class="clearfix"></div>
 							<div class="bot-border"></div>
 
-							<div class="col-sm-5 col-xs-6 tital" id="email">Email주소:</div>
+							<div class="col-sm-5 col-xs-6 tital" id="email">Email주소 : </div>
 							<div class="col-sm-7"></div>
 
 						</div>
@@ -96,36 +96,22 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="container">
-		<div class="panel panel-default">
-			<div class="panel-heading"><strong>주문 내역</strong></div>
-			<table class="table">
-				<thead>
-					<th style="width:10%">#</th>
-					<th style="width:25%">송장번호</th>
-					<th style="width:35%">주소</th>
-					<th style="max-width:15%">추적</th>
-					<th style="max-width:15%">교환/환불</th>
-				</thead>
-				<tbody>
-					<th scope="row">1</th>
-					<td class="ellipsis">12345678945</td>
-					<td class="ellipsis">율전동 433-7 303asdasdasddasdasdasdadasasd</td>
-					<td>
-						<button type="button" class="btn btn-default btn-sm" id="trace">
-	          				<span class="glyphicon glyphicon-search"></span>
-	        			</button>
-					</td>
-					<td>
-						<button type="button" class="btn btn-default btn-sm" id="exchange-refund">
-	          				<span class="glyphicon glyphicon-list-alt"></span>
-	        			</button>
-					</td>
-				</tbody>
-			</table>
-		</div>
-	</div>
+      <div class="panel panel-default">
+         <div class="panel-heading"><strong>주문 내역</strong></div>
+         <table class="table">
+            <thead>
+               <th style="width:25%">상품명</th>
+               <th style="width:25%">택배회사</th>
+               <th style="width:35%">송장번호</th>
+               <th class="exchange-refund1">교환/환불</th>
+               <th class="exchange-refund2">교/환</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+         </table>
+      </div>
+    </div>
 
 	<div class="container">
 		<hr>

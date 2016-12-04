@@ -14,7 +14,7 @@
     <script src='../js/jquery.session.js'></script>
 	<script src='../js/bootstrap.js'></script>
 	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-	<script src='../js/sign.js'></script>
+	<script src='../js/order.js'></script>
 	<script src='../js/nav_bar.js'></script>
 
 
@@ -28,15 +28,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="initialPage.html">NFD</a>
+                <a class="navbar-brand" href="index.html">NFD</a>
 			</div>
 			<div class="collapse navbar-collapse" id="nav-dropdown">
 				<ul class="nav navbar-nav" id="product">
 					<li>
-						<a href="index.html">상품</a>
+						<a href="initialPage.html">상품</a>
 					</li>
 					<li>
-						<a href="#">고객 센터</a>
+						<a href="contact.html">고객 센터</a>
 					</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-login" id="Logined">
@@ -50,7 +50,7 @@
 
 		<div class="col-lg-12 well">
 			<div class="row">
-				<form action="../php/sign_do.php?dup=window.duplicated" method="post" id="signfrm">
+				<form action="../php/order_do.php" method="post" id="orderfrm">
 					<div class="col-sm-12">
 
 						<h3>배송지 정보</h3>
@@ -59,9 +59,9 @@
 
 						<div class="form-group">
 							<label>수령인</label>
-							<input type="text" placeholder="수령인" name="phonenum" id="phonenum" class="form-control">
+							<input type="text" placeholder="수령인" name="id" id="id" class="form-control">
+							<input type="text" class="hide form-control" id="buyer" name="buyer">
 						</div>
-
 						<div class="row">
 							<div class="col-sm-4 col-xs-7 form-group">
 								<label>우편 번호</label>
@@ -96,38 +96,38 @@
 
 						<div class="form-group">
 							<label>배송시 요구사항</label>
-							<textarea placeholder="배송시 요구사항" name="email" id="email" class="form-control"></textarea>
+							<textarea placeholder="배송시 요구사항" name="email" id="etc" class="form-control"></textarea>
 						</div>
 
 						<hr>
 
-					     <h3>결제 정보</h3>
-						 <hr>
+					    <h3>결제 정보</h3>
+						<hr>
 
-						 <div class="form-group">
+						<div class="form-group">
  							<label>카드 선택</label><br>
 							 <div class="expiration">
-								 <select class="form-control select-card" name="expiry-month" id="expiry-month">
-									 <option>카드 선택</option>
-									 <option value="01">신한카드</option>
-									 <option value="02">비씨카드</option>
-									 <option value="03">삼성카드</option>
-									 <option value="04">KB국민카드</option>
-									 <option value="05">현대카드</option>
-									 <option value="06">롯데카드</option>
-									 <option value="07">NH농협카드</option>
-									 <option value="08">씨티카드</option>
-									 <option value="09">우리카드</option>
-									 <option value="10">IBK기업은행카드</option>
-									 <option value="11">신협체크카드</option>
-									 <option value="12">우체국카드</option>
-								 </select>
-							 </div>
-						 </div>
+								<select class="form-control select-card" name="expiry-month" id="card">
+									<option value="00">카드 선택</option>
+									<option value="01">신한카드</option>
+									<option value="02">비씨카드</option>
+									<option value="03">삼성카드</option>
+									<option value="04">KB국민카드</option>
+									<option value="05">현대카드</option>
+									<option value="06">롯데카드</option>
+									<option value="07">NH농협카드</option>
+									<option value="08">씨티카드</option>
+									<option value="09">우리카드</option>
+									<option value="10">IBK기업은행카드</option>
+									<option value="11">신협체크카드</option>
+									<option value="12">우체국카드</option>
+								</select>
+							</div>
+						</div>
 
-						 <div class="form-group">
+						<div class="form-group">
  							<label>카드 번호</label>
- 							<input type="text" name="address1" placeholder="카드 번호" id="address1" class="form-control">
+ 							<input type="text" name="address1" placeholder="카드 번호" id="cardnum" class="form-control">
  						</div>
 
 						<div class="form-group">
@@ -135,7 +135,7 @@
 							<br>
 							<div class="expiration">
 								<select class="form-control expiration" name="expiry-month" id="expiry-month">
-									<option>월</option>
+									<option value="00">월</option>
 									<option value="01">Jan (01)</option>
 									<option value="02">Feb (02)</option>
 									<option value="03">Mar (03)</option>
@@ -151,8 +151,8 @@
 								</select>
 							</div>
 							<div class="expiration">
-								<select class="form-control expiration" name="expiry-year">
-									<option>연도</option>
+								<select class="form-control expiration" name="expiry-year" id="expiry-year">
+									<option value="00">연도</option>
 									<option value="16">2016</option>
 									<option value="17">2017</option>
 									<option value="18">2018</option>
@@ -175,10 +175,10 @@
 
 						<div class="form-group" style="float:left; margin-top:7px;">
 							<label>결제 금액 : </label>
-							<strong>12345</strong><strong>원</strong>
+							<strong id="total"></strong><strong>원</strong>
 						</div>
 
-						<button type="button" class="btn btn-default btn-md" style="float:right">
+						<button type="submit" class="btn btn-default btn-md" style="float:right" id="order">
 							<span class="glyphicon glyphicon-ok"></span><strong>결제</strong>
 						</button>
 					</div>

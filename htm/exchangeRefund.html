@@ -14,7 +14,7 @@
     <script src='../js/jquery.session.js'></script>
 	<script src='../js/bootstrap.js'></script>
 	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-	<script src='../js/sign.js'></script>
+	<script src='../js/exchangeRefund.js'></script>
 	<script src='../js/nav_bar.js'></script>
 
 
@@ -28,15 +28,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="initialPage.html">NFD</a>
+                <a class="navbar-brand" href="index.html">NFD</a>
 			</div>
 			<div class="collapse navbar-collapse" id="nav-dropdown">
 				<ul class="nav navbar-nav" id="product">
 					<li>
-						<a href="index.html">상품</a>
+						<a href="initialPage.html">상품</a>
 					</li>
 					<li>
-						<a href="#">고객 센터</a>
+						<a href="contact.html">고객 센터</a>
 					</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-login" id="Logined">
@@ -49,24 +49,37 @@
 	    <h1 class="well">교환/환불</h1>
 		<div class="col-lg-12 well">
 			<div class="row">
-				<form action="../php/sign_do.php?dup=window.duplicated" method="post" id="signfrm">
+				<form action="../php/exchangeRefund.php" method="post" id="erfrm">
 					<div class="col-sm-12">
 
 						<div class="form-group">
 							<label>판매자 이름</label>
-							<input type="text" name="sellerName" id="sellerName" class="form-control" value="판매자 이름" readonly>
+							<input type="text" name="sellerName" id="sellerName" class="form-control" readonly>
+							<input type="text" class="hide form-control" id="orderid" name="orderid">
 						</div>
 
 						<div class="form-group">
 							<label>판매자 주소</label>
-							<input type="text" name="sellerAddress" id="sellerAddress" class="form-control" value="판매자 주소" readonly>
+							<input type="text" name="sellerAddress" id="sellerAddress" class="form-control" readonly>
 						</div>
 
 						<div class="form-group">
 							<label>판매자 전화번호</label>
-							<input type="text" name="sellerPhone" id="sellerPhone" class="form-control" value="판매자 전화번호" readonly>
+							<input type="text" name="sellerPhone" id="sellerPhone" class="form-control" readonly>
 						</div>
-
+						<label>교환/환불</label><label style="margin-left:70px">택배 회사</label>
+                			<br>
+                		<select class="form-control" style="width:80px; height:35px; margin-bottom: 5px; display: inline;" name="flag">
+                    		<option value="1">교환</option>
+                    		<option value="0">환불</option>
+                  		</select>
+						<select class="form-control" style="width:100px; height:35px; margin-bottom: 5px; margin-left:50px; display: inline;" name="ship">
+                    		<option value="0">CJ</option>
+                    		<option value="1">우체국</option>
+                    		<option value="2">한진</option>
+                    		<option value="3">로젠</option>
+                    		<option value="4">KGB</option>
+                  		</select>
 						<div class="form-group">
 							<label>송장번호 입력</label>
 							<input type="text" placeholder="송장번호 입력" name="trackingNum" id="trackingNum" class="form-control">

@@ -33,7 +33,7 @@ function checkEmpty() {
     }
     if ($.trim($("input#address2").val()) == "") {
         alert("상세 주소를 입력하세요.");
-        $("input#zipcode").focus();
+        $("input#address2").focus();
         return false;
     }
     if ($.trim($("input#name").val()) == "") {
