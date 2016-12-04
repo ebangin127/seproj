@@ -59,18 +59,16 @@
   }
  }
 
- @media screen and (max-width:768px) {
- }
- @media screen and (min-width:768px) {
- }
-
 #idcheck, #findaddress  {
 	margin-top: 25px;
 }
 
 .navbar {border-radius:0px;}
 
-.navbar-login {float:right;}
- @media screen and (max-width:425px) {
-	 .navbar-login {float:left;}
+ @media screen and (min-width:768px) {
+	 .navbar-login {float:right;;}
  }
+
+.btn {
+	border: 1px solid #000
+}

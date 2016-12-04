@@ -1,55 +1,24 @@
-.table>tbody>tr>td, .table>tfoot>tr>td{
-    vertical-align: middle;
+
+.navbar {border-radius:0px;}
+
+ @media screen and (min-width:768px) {
+	 .navbar-login {float:right;;}
+ }
+.btn {
+	padding:6px;
+	font-size: 14px;
 }
-@media screen and (max-width: 600px) {
-    table#cart tbody td .form-control{
-		width:20%;
-		display: inline !important;
-	}
-	.actions .btn{
-		width:36%;
-		margin:1.5em 0;
-	}
-
-	.actions .btn-info{
-		float:left;
-	}
-	.actions .btn-danger{
-		float:right;
-	}
-
-	table#cart thead { display: none; }
-	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
-	table#cart tbody tr td:first-child { background: #333; color: #fff; }
-	table#cart tbody td:before {
-		content: attr(data-th); font-weight: bold;
-		display: inline-block; width: 8rem;
-	}
-
-
-
-	table#cart tfoot td{display:block; }
-	table#cart tfoot td .btn{display:block;}
-
+.payment {
+	padding:1px;
+	margin-top:2px;
 }
 
-@media screen and (max-width: 425px) {
-	.description {
-		visibility: hidden;
-	}
-}
-.center{
-width: 150px;
-  margin: 40px auto;
-
+.continue-shopping {
+	padding:1px;
+	margin-top:2px;
 }
 
-.qty-plus-minus {
-	max-width: 120px;
-	max-height: 40px;
-	float:right;
-}
-
-#qty {
-	width: 60px!important;
+.total {
+	padding-left: 0px;
+	padding-right: 0px;
 }
