@@ -1,0 +1,7 @@
+@media screen and (min-width:768px) {
+	.navbar-login {float:right;}
+}
+
+.content {
+	font-size: 14px;
+}
