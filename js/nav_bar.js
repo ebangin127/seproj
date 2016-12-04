@@ -2,7 +2,7 @@ $(document).ready(function(){
 	if(isLogined()){
 		var tmpHTML = '';
 		tmpHTML += '<li><a class="navbar-brand">'+$.session.get('user_id')+'</a></li>';
-		tmpHTML += '<li><a href="#">My Page</a></li><li><a href="#">My Cart</a></li><li><a href="javascript:void(0)" onclick="logout()">로그아웃</a></li>';
+		tmpHTML += '<li><a href="../htm/myPage.html">My Page</a></li><li><a href="../htm/cart.html">My Cart</a></li><li><a href="javascript:void(0)" onclick="logout()">로그아웃</a></li>';
 		$("#Logined").html(tmpHTML);
 	}
 	else{

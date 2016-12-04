@@ -17,11 +17,18 @@
 		return $result;
 	}
 
-	function sqlProductList(){
+	function sqlProductList($search){
 		$db = mysqli_connect("localhost", "root", "", "test");
-		$productlist_sql = "SELECT Products.productid, Products.productname, Products.price, Products.imageurl, Benchmarks.freezingval
-							FROM Products INNER JOIN Benchmarks ON Products.productid = Benchmarks.productid
-							ORDER BY Products.productid";
+		if($search == false){
+			$productlist_sql = "SELECT Products.productid, Products.productname, Products.price, Products.imageurl, Benchmarks.freezingval, Products.description
+								FROM Products INNER JOIN Benchmarks ON Products.productid = Benchmarks.productid
+								ORDER BY Products.productid";
+		}
+		else{
+			$productlist_sql = "SELECT Products.productid, Products.productname, Products.price, Products.imageurl, Benchmarks.freezingval, Products.description
+								FROM Products INNER JOIN Benchmarks ON Products.productid = Benchmarks.productid WHERE productname LIKE '%$search%'
+								ORDER BY Products.productid";
+		}
 		$result = mysqli_query($db, $productlist_sql);
 		return $result;
 	}
@@ -53,7 +60,7 @@
 
 	function sqlDelcart($buyer, $productid){
 		$db = mysqli_connect("localhost", "root", "", "test");
-		$delCart_sql = "DELETE FROM Cart WHERE buyer = '$buyer' AND productid = $productid)";
+		$delCart_sql = "DELETE FROM Cart WHERE buyer = '$buyer' AND productid = $productid";
 		$result = mysqli_query($db, $delCart_sql);
 		return $result;
 	}
@@ -62,6 +69,21 @@
 		$db = mysqli_connect("localhost", "root", "", "test");
 		$login_sql = "SELECT * FROM Accounts WHERE ID = '$ID'";
 		$result = mysqli_query($db, $login_sql);
+		return $result;
+	}
+
+	function sqlMypage($ID){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$mypage_sql = "SELECT * FROM Accounts WHERE ID = '$ID'";
+		$result = mysqli_query($db, $mypage_sql);
+		return $result;
+	}
+
+	function sqlMycart($ID){
+		$db = mysqli_connect("localhost", "root", "", "test");
+		$mycart_sql = "SELECT Products.productid, Products.seller, Products.productname, Products.price, Products.imageurl, Products.description, Cart.qty
+					   FROM Products INNER JOIN Cart ON Products.productid = Cart.productid WHERE buyer = '$ID' ORDER BY Products.seller";
+		$result = mysqli_query($db, $mycart_sql);
 		return $result;
 	}
 ?>

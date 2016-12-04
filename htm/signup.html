@@ -28,13 +28,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">NFD</a>
-            </div>
-            <div class="collapse navbar-collapse" id="nav-dropdown">
-                <ul class="nav navbar-nav" id="product">
-                    <li>
-                        <a href="#">상품</a>
-                    </li>
+                <a class="navbar-brand" href="initialPage.html">NFD</a>
+			</div>
+			<div class="collapse navbar-collapse" id="nav-dropdown">
+				<ul class="nav navbar-nav" id="product">
+					<li>
+						<a href="index.html">상품</a>
+					</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-login" id="Logined">
 				</ul>
@@ -54,7 +54,7 @@
 								<input type="text" placeholder="ID" name="id" id="id" class="form-control">
 							</div>
 							<div class="col-sm-5 col-xs-4 form-group">
-								<button class="btn btn-default" id="idcheck" onclick="checkDuplicateID()">
+								<button type="button" class="btn btn-default" id="idcheck" onclick="checkDuplicateID()">
 									<span class="glyphicon glyphicon-ok"></span><strong>중복 확인</strong>
 								</button>
 							</div>
@@ -72,7 +72,7 @@
 								<input type="text" name="zipcode" placeholder="우편 번호" id="zipcode" class="form-control">
 							</div>
 							<div class="col-sm-4 col-xs-5 form-group">
-								<button class="btn btn-default" name="findaddress" id="findaddress" onclick="findAddress()">
+								<button type="button" class="btn btn-default" name="findaddress" id="findaddress" onclick="findAddress()">
 									<span class="glyphicon glyphicon-search"></span><strong>주소 검색</strong>
 								</button>
 							</div>
@@ -105,7 +105,7 @@
 							<input type="text" placeholder="Email 주소" name="email" id="email" class="form-control">
 						</div>
 
-						<hr>
+						<hr />
 
 						<button type="submit" class="btn btn-default">
 							</span><strong>제출</strong>

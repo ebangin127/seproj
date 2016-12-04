@@ -32,8 +32,10 @@ $(document).ready(function() {
 	$("#addCart").click(function(){
 		if($.session.get('user_id')){
 			var user = $.session.get('user_id');
-			var formData = {productid:pid, buyer:user, qty:1};
-			$.post("../php/Cart.php?flag=0", {productid:pid, buyer:user, qty:1},
+			var q = $("#qty").val();
+			console.log(q);
+			var formData = {productid:pid, buyer:user, qty};
+			$.post("../php/Cart.php?flag=0", {productid:pid, buyer:user, qty:q},
 				function(data){
 					if(data == true){
 						$("#modalBtn").trigger("click");

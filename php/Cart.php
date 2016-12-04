@@ -19,10 +19,10 @@
 		$productid = $_POST['productid'];
 		$result = sqlDelcart($buyer, $productid);
 		if($result){
-			echo "true";
+			echo true;
 		}
 		else{
-			echo "false";
+			echo false;
 		}
 	}
 

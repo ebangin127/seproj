@@ -13,16 +13,16 @@
 		<link href="css/cart.css" rel="stylesheet">
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="../js/jquery.js"></script>
 		<script src="../js/jquery.session.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/nav_bar.js"></script>
+		<script src="../js/myCart.js"></script>
 
 
 	</head>
 
 	<body>
-
+		
 		<nav class="navbar navbar-inverse" role="navigation">
 	        <div class="container">
 	            <div class="navbar-header">
@@ -31,13 +31,13 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <a class="navbar-brand" href="index.html">NFD</a>
-	            </div>
-	            <div class="collapse navbar-collapse" id="nav-dropdown">
-	                <ul class="nav navbar-nav" id="product">
-	                    <li>
-	                        <a href="#">상품</a>
-	                    </li>
+	                <a class="navbar-brand" href="initialPage.html">NFD</a>
+				</div>
+			<div class="collapse navbar-collapse" id="nav-dropdown">
+				<ul class="nav navbar-nav" id="product">
+					<li>
+						<a href="index.html">상품</a>
+					</li>
 	                </ul>
 	                <ul class="nav navbar-nav navbar-login" id="Logined">
 					</ul>
@@ -46,140 +46,9 @@
 	    </nav>
 
 		<div class="container">
-			<div class="row">
-				<!-- 판매자별 카트 리스트 -->
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<div class="row">
-								<div class="col-xs-6">
-									<h5><span class="glyphicon glyphicon-user"></span><strong> 판매자명 : 알다래</strong></h5>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="hidden-xs col-sm-2"><img class="img-responsive" src="http://placehold.it/100x70">
-							</div>
-							<div class="col-xs-4 col-sm-4">
-								<h4 class="product-name"><strong>Product name</strong></h4>
-								<h4><small class="hidden-xs">Product description</small></h4>
-							</div>
-							<div class="col-xs-8 col-sm-6">
-								<div class="col-xs-6">
-									<h5>&#8361 25.00</h5>
-								</div>
-								<div class="col-xs-3">
-									<h5>25</h5>
-								</div>
-								<div class="col-xs-3">
-									<button type="button" class="btn btn-link btn-xs" style="margin-top:5px;">
-										<span class="glyphicon glyphicon-trash"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<hr>
-						<div class="row">
-							<div class="hidden-xs col-sm-2"><img class="img-responsive" src="http://placehold.it/100x70">
-							</div>
-							<div class="col-xs-4 col-sm-4">
-								<h4 class="product-name"><strong>Product name</strong></h4>
-								<h4><small class="hidden-xs">Product description</small></h4>
-							</div>
-							<div class="col-xs-8 col-sm-6">
-								<div class="col-xs-6">
-									<h5>&#8361 25.00</h5>
-								</div>
-								<div class="col-xs-3">
-									<h5>25</h5>
-								</div>
-								<div class="col-xs-3">
-									<button type="button" class="btn btn-link btn-xs" style="margin-top:5px;">
-										<span class="glyphicon glyphicon-trash"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<h4 id="nothing" style="text-align: center;"></h4>
+			<div class="row" id="cart">
 
-				<!-- 판매자별 카트 리스트 -->
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="panel-title">
-							<div class="row">
-								<div class="col-xs-6">
-									<h5><span class="glyphicon glyphicon-user"></span><strong> 판매자명 : 화이규</strong></h5>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="hidden-xs col-sm-2"><img class="img-responsive" src="http://placehold.it/100x70">
-							</div>
-							<div class="col-xs-4 col-sm-4">
-								<h4 class="product-name"><strong>Product name</strong></h4>
-								<h4><small class="hidden-xs">Product description</small></h4>
-							</div>
-							<div class="col-xs-8 col-sm-6">
-								<div class="col-xs-6">
-									<h5>&#8361 25.00</h5>
-								</div>
-								<div class="col-xs-3">
-									<h5>25</h5>
-								</div>
-								<div class="col-xs-3">
-									<button type="button" class="btn btn-link btn-xs" style="margin-top:5px;">
-										<span class="glyphicon glyphicon-trash"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<hr>
-						<div class="row">
-							<div class="hidden-xs col-sm-2"><img class="img-responsive" src="http://placehold.it/100x70">
-							</div>
-							<div class="col-xs-4 col-sm-4">
-								<h4 class="product-name"><strong>Product name</strong></h4>
-								<h4><small class="hidden-xs">Product description</small></h4>
-							</div>
-							<div class="col-xs-8 col-sm-6">
-								<div class="col-xs-6">
-									<h5>&#8361 25.00</h5>
-								</div>
-								<div class="col-xs-3">
-									<h5>25</h5>
-								</div>
-								<div class="col-xs-3">
-									<button type="button" class="btn btn-link btn-xs" style="margin-top:5px;">
-										<span class="glyphicon glyphicon-trash"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel-footer text-center">
-					<div class="row">
-						<div class="col-xs-4 continue-shopping">
-							<button type="button" class="btn btn-default btn-block">
-								<strong>계속 쇼핑하기</strong>
-							</button>
-						</div>
-						<div class="col-xs-5 total">
-							<h4 class="text-center">Total <strong>&#8361 510.00</strong></h4>
-						</div>
-						<div class="col-xs-3 payment">
-							<button type="button" class="btn btn-default btn-sm">
-								<span class="glyphicon glyphicon-ok"></span><strong>결제</strong>
-							</button>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 
