@@ -8,7 +8,7 @@ $(document).ready(function(){
 				page = parseInt(paramsMap['page']);
 				$cnt = (temp[0] - (temp[0]%9)) / 9 + 1;
 				for($i=1;$i<=$cnt;$i++){
-					$("#pages").append("<li><a href='../htm/initialPage.html?page="+$i+"'>"+$i+"</a></li>");
+					$("#pages").append("<li><a href='../htm/index.html?page="+$i+"'>"+$i+"</a></li>");
 				}
 				
 				for($n=1;$n<=9;$n++){
@@ -27,7 +27,7 @@ $(document).ready(function(){
 				temp = data.split("?");
 				$cnt = (temp[0] - (temp[0]%9)) / 9 + 1;
 				for($i=1;$i<=$cnt;$i++){
-					$("#pages").append("<li><a href='../htm/initialPage.html?page="+$i+"'>"+$i+"</a></li>");
+					$("#pages").append("<li><a href='../htm/index.html?page="+$i+"'>"+$i+"</a></li>");
 				}
 				page = 1;
 				for($n=1;$n<=9;$n++){

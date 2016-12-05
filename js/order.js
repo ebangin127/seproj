@@ -1,23 +1,13 @@
 $(document).ready(function() {
-    var paramsMap = getParamsMap();
-    total = paramsMap['total'];
-    $("#total").html(total);
     id = $.session.get('user_id');
-    if(paramsMap['pid']){
-        $("input#directOrder").val(paramsMap['pid']);
-        $("input#qty").val(paramsMap['qty']);
-        console.log($("input#directOrder").val());
-        console.log($("input#qty").val());
-    }
-    else{
-        $("input#orderDirect").val(0);
-        $("input#qty").val(0);
-    }
+    console.log(id);
     $("input#buyer").val(id);
     $("form#orderfrm").bind("submit", function() {
         return checkEmpty();
     });
-    
+    var paramsMap = getParamsMap();
+    total = paramsMap['total'];
+    $("#total").html(total);
 });
 
 function checkEmpty() {
@@ -86,34 +76,3 @@ function getParamsMap() {
     });
     return paramsMap;
 };
-
-function findAddress() {
-    new daum.Postcode({
-        oncomplete: function(data) {
-            var fullAddr = '';
-            var extraAddr = '';
-
-            if (data.userSelectedType === 'R') {
-                fullAddr = data.roadAddress;
-
-            } else {
-                fullAddr = data.jibunAddress;
-            }
-
-            if (data.userSelectedType === 'R') {
-                if (data.bname !== '') {
-                    extraAddr += data.bname;
-                }
-                if (data.buildingName !== '') {
-                    extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                }
-                fullAddr += (extraAddr !== '' ? ' (' + extraAddr + ')' : '');
-            }
-
-            document.getElementById('sample6_postcode').value = data.zonecode;
-            document.getElementById('address').value = fullAddr;
-
-            document.getElementById('address2').focus();
-        }
-    }).open();
-}

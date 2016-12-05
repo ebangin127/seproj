@@ -14,7 +14,7 @@ function getParamsMap() {
 $(document).ready(function() {
 	var paramsMap = getParamsMap();
 	var pid = parseInt(paramsMap['pid']);
-	var price = 0;
+
 	$.ajax({
 		url:'../php/productView.php?pid='+pid,
 		success:function(data){
@@ -23,7 +23,6 @@ $(document).ready(function() {
 			$("#seller").html(temp[1]);
 			$("#name").html(temp[2]);
 			$("#price").html(temp[3]+"원");
-			price = temp[3];
 			//$("#image").attr("src", "../public/images/"+temp[4]);
 			$("#description").html(temp[5]);
 			$("#tbody").html(temp[6]);
@@ -47,10 +46,5 @@ $(document).ready(function() {
 		}
 		else
 			alert("먼저 로그인해주세요.");
-	});
-
-	$("#directOrder").click(function(){
-		total = price * $("#qty").val();
-		$(location).attr("href", "../htm/payment.html?pid="+pid+"&qty="+$("#qty").val()+"&total="+total);
 	});
 });

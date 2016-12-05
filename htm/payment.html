@@ -61,17 +61,17 @@
 							<label>수령인</label>
 							<input type="text" placeholder="수령인" name="id" id="id" class="form-control">
 							<input type="text" class="hide form-control" id="buyer" name="buyer">
-							<input type="text" class="hide form-control" id="directOrder" name="directOrder">							
-							<input type="text" class="hide form-control" id="qty" name="qty">							
 						</div>
 						<div class="row">
 							<div class="col-sm-4 col-xs-7 form-group">
 								<label>우편 번호</label>
 								<input type="text" name="zipcode" placeholder="우편 번호" id="zipcode" class="form-control">
 							</div>
-							<button type="button" class="btn btn-default" name="findaddress" id="findaddress" onclick="findAddress()">
-								<span class="glyphicon glyphicon-search"></span><strong>주소 검색</strong>
-							</button>
+							<div class="col-sm-4 col-xs-5 form-group">
+								<button class="btn btn-default" name="findaddress" id="findaddress" onclick="findAddress()">
+									<span class="glyphicon glyphicon-search"></span><strong>주소 검색</strong>
+								</button>
+							</div>
 						</div>
 
 						<div class="form-group">
