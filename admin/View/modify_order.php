@@ -143,7 +143,7 @@
             $orderrow["zipcode"], $orderrow["address1"],
             $orderrow["address2"],
             $productsource,
-            '<select name=\"shippingmethod\" value=\"', $orderrow["shipmethod4sending"],
+            '<select id=\"shippingmethod\" name=\"shippingmethod\" value=\"', $orderrow["shipmethod4sending"],
             '\"><option value=\"cj\">CJ대한통운</option><option value=\"postoffice\">우체국</option><option value=\"hanjin\">한진택배</option><option value=\"logen\">로젠택배</option><option value=\"kgb\">KGB택배</option></select>',
             '<input type=\"\" name=\"trackingnumber\" class=\"form-control\" id=\"\" value=\"',
             $orderrow["trackno4sending"], "\\\">");
@@ -168,6 +168,11 @@
       $("#" + CurrentMenu).addClass("active");
       fillForm(data);
       refreshMenu(type);
+  <?php
+      if(isset($orderrow["shipmethod4sending"])) {
+        printf("$(\"#shippingmethod\").val('%s').change();", $orderrow["shipmethod4sending"]);
+      }
+  ?>
     </script>
   </body>
 </html>
