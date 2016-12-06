@@ -51,9 +51,9 @@ function checkEmpty() {
         $("input#email").focus();
         return false;
     }
-    
-    
-    
+
+
+
     return true;
 };
 
@@ -101,8 +101,8 @@ function findAddress() {
                 fullAddr += (extraAddr !== '' ? ' (' + extraAddr + ')' : '');
             }
 
-            document.getElementById('sample6_postcode').value = data.zonecode;
-            document.getElementById('address').value = fullAddr;
+            document.getElementById('zipcode').value = data.zonecode;
+            document.getElementById('address1').value = fullAddr;
 
             document.getElementById('address2').focus();
         }

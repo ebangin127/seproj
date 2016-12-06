@@ -24,6 +24,7 @@ $(document).ready(function(){
 		$.ajax({
 			url:'../php/productList.php',
 			success:function(data){
+				console.log(data);
 				temp = data.split("?");
 				$cnt = (temp[0] - (temp[0]%9)) / 9 + 1;
 				for($i=1;$i<=$cnt;$i++){

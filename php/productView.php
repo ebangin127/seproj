@@ -5,12 +5,12 @@
 	$temp = '';
 	if($result){
 		$row = mysqli_fetch_assoc($result);
-		$temp .= $row['productid'].'?';
-		$temp .= $row['seller'].'?';
-		$temp .= $row['productname'].'?';
-		$temp .= $row['price'].'?';
-		$temp .= $row['imageurl'].'?';
-		$temp .= $row['description'].'?';
+		$temp .= $row['productid'].'!';
+		$temp .= $row['seller'].'!';
+		$temp .= $row['productname'].'!';
+		$temp .= $row['price'].'!';
+		$temp .= $row['imageurl'].'!';
+		$temp .= $row['description'].'!';
 
 		$result = sqlBenchmarkData($pid);
 		if($result){
@@ -23,7 +23,7 @@
 				$temp .= '<td class="table_spec_right col-xs-2">'.$row['avgval'].'</td>';
 				$temp .= '<td class="table_spec_right col-xs-2">'.$row['maxval'].'</td>';
 				$temp .= '<td class="table_spec_right col-xs-2">'.$row['freezingval'].'</td>';
-				$temp .= '<td class="table_spec_right col-xs-2">'.$row['imageurl'].'</td>';
+				$temp .= '<td class="table_spec_right col-xs-2"><a href="'.$row['imageurl'].'">클릭</a></td>';
 				$temp .= '</tr>';
 			}
 			echo $temp;

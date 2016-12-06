@@ -28,7 +28,7 @@
 	}
 	if($result){
 		$count = mysqli_num_rows($result);
-		if($count == 0){ 
+		if($count == 0){
 			echo "0";
 			return;
 		}
@@ -58,10 +58,10 @@
 				for($i = 0; $i < $count; $i++){
 					if($p_list[$i]->productid == $pid){
 						$temp = '<div class="col-sm-4 col-lg-4 col-md-4"><div class="thumbnail">';
-						$temp .= '<img src="../public/images/'.$p_list[$i]->imageurl.'" alt=""><div class="caption">';
-						$temp .= '<h4 class="pull-right">'.$p_list[$i]->price.'원</h4>';
+						$temp .= '<img src="'.$p_list[$i]->imageurl.'" style="height:240px; width:auto"><div class="caption">';
 						$temp .= '<h4><a href="../htm/selectProduct.html#pid='.$p_list[$i]->productid.'">'.$p_list[$i]->productname.'</a>';
-						$temp .= '</h4><p class="pull-right">Average Freezing : '.$p_list[$i]->avgfreezing.'</p><br><p>'.$p_list[$i]->description.'</p>';
+						$temp .= '<h4 style="text-align:right">'.$p_list[$i]->price.'원</h4>';
+						$temp .= '</h4><p style="text-align:right">Average Freezing : '.$p_list[$i]->avgfreezing.'</p>';
 						$temp .= '</div></div></div>?';
 						$tmpHTML .= $temp;
 						break;

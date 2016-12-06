@@ -1,5 +1,4 @@
 <?php
-// for ajax check duplicated ID
 	require 'sql.php';
 	$ID = $_GET['id'];
 

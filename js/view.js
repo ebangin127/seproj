@@ -18,13 +18,14 @@ $(document).ready(function() {
 	$.ajax({
 		url:'../php/productView.php?pid='+pid,
 		success:function(data){
-			var temp = data.split("?");
+			var temp = data.split("!");
 			$("#seller").html(temp[1]);
 			$("#seller").html(temp[1]);
 			$("#name").html(temp[2]);
 			$("#price").html(temp[3]+"원");
 			price = temp[3];
-			//$("#image").attr("src", "../public/images/"+temp[4]);
+			$("#image").attr("src", temp[4]);
+			console.log(temp[5]);
 			$("#description").html(temp[5]);
 			$("#tbody").html(temp[6]);
 		}
@@ -50,7 +51,11 @@ $(document).ready(function() {
 	});
 
 	$("#directOrder").click(function(){
-		total = price * $("#qty").val();
-		$(location).attr("href", "../htm/payment.html?pid="+pid+"&qty="+$("#qty").val()+"&total="+total);
+		if($.session.get('user_id')){
+			total = price * $("#qty").val();
+			$(location).attr("href", "../htm/payment.html?pid="+pid+"&qty="+$("#qty").val()+"&total="+total);
+		}
+		else
+			alert("먼저 로그인해주세요.");
 	});
 });

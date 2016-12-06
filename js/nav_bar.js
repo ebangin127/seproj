@@ -6,7 +6,7 @@ $(document).ready(function(){
 		$("#Logined").html(tmpHTML);
 	}
 	else{
-		var tmpHTML = '<li id="login_or_logout"><a href="../htm/login.html">로그인</a></li><li id="login_or_logout"><a href="../htm/signup.html">회원 가입</a></li>';
+		var tmpHTML = '<li id="login_or_logout"><a href="../htm/logIn.html">로그인</a></li><li id="login_or_logout"><a href="../htm/signup.html">회원 가입</a></li>';
 		tmpHTML += ''
 		$("#Logined").html(tmpHTML);
 	}

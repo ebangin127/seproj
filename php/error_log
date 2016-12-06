@@ -1,0 +1,180 @@
+[05-Dec-2016 02:25:58 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 02:25:58 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 02:25:58 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 02:27:32 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 13
+[05-Dec-2016 02:27:32 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 16
+[05-Dec-2016 02:27:42 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 6
+[05-Dec-2016 02:27:42 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 8
+[05-Dec-2016 02:27:42 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/login_do.php on line 9
+[05-Dec-2016 02:27:46 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 6
+[05-Dec-2016 02:27:46 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 8
+[05-Dec-2016 02:27:46 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/login_do.php on line 9
+[05-Dec-2016 02:34:44 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 02:34:44 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 02:34:44 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 02:34:56 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 21
+[05-Dec-2016 02:34:56 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 32
+[05-Dec-2016 02:35:28 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 21
+[05-Dec-2016 02:35:28 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 32
+[05-Dec-2016 02:35:35 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 21
+[05-Dec-2016 02:35:35 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 32
+[05-Dec-2016 02:47:03 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 21
+[05-Dec-2016 02:47:03 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 32
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 51
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 54
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 51
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 54
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 132
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 139
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 02:54:54 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 132
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 139
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 6
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 8
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/login_do.php on line 9
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 83
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 86
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/myCart.php on line 6
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 6
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 8
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/login_do.php on line 9
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 109
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 113
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/myOrder.php on line 7
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 83
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 86
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/myCart.php on line 6
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 109
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 113
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/myOrder.php on line 7
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 76
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 78
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/myPage.php on line 6
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 37
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 39
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/order_do.php on line 36
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 91
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 94
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 96
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/sql.php on line 97
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 125
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 127
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 76
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 78
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/myPage.php on line 6
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 37
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 39
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/order_do.php on line 36
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 91
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 94
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 96
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/sql.php on line 97
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 125
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 127
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 21
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 32
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 37
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 39
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 21
+[05-Dec-2016 02:54:55 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 32
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 102
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 104
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/setSeller.php on line 6
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/setSeller.php on line 8
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 37
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 39
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 102
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 104
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/setSeller.php on line 6
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 02:54:56 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/setSeller.php on line 8
+[05-Dec-2016 03:41:10 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 6
+[05-Dec-2016 03:41:10 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 8
+[05-Dec-2016 03:41:10 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/login_do.php on line 9
+[05-Dec-2016 03:41:21 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 69
+[05-Dec-2016 03:41:21 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 71
+[05-Dec-2016 03:41:21 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 03:41:30 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/naraeons/public_html/nfd/php/sql.php on line 13
+[05-Dec-2016 03:41:30 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 16
+[05-Dec-2016 03:45:35 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'naraeonn_se'@'localhost' (using password: YES) in /home/naraeons/public_html/nfd/php/sql.php on line 76
+[05-Dec-2016 03:45:35 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 79
+[05-Dec-2016 03:45:35 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 03:45:36 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'naraeonn_se'@'localhost' (using password: YES) in /home/naraeons/public_html/nfd/php/sql.php on line 76
+[05-Dec-2016 03:45:36 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 79
+[05-Dec-2016 03:45:36 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 03:45:44 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'naraeonn_se'@'localhost' (using password: YES) in /home/naraeons/public_html/nfd/php/sql.php on line 14
+[05-Dec-2016 03:45:44 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 18
+[05-Dec-2016 03:46:53 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'naraeonn_se'@'localhost' (using password: YES) in /home/naraeons/public_html/nfd/php/sql.php on line 76
+[05-Dec-2016 03:46:53 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 79
+[05-Dec-2016 03:46:53 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 03:46:54 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'naraeonn_se'@'localhost' (using password: YES) in /home/naraeons/public_html/nfd/php/sql.php on line 76
+[05-Dec-2016 03:46:54 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 79
+[05-Dec-2016 03:46:54 America/Detroit] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 8
+[05-Dec-2016 03:47:03 America/Detroit] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'naraeonn_se'@'localhost' (using password: YES) in /home/naraeons/public_html/nfd/php/sql.php on line 14
+[05-Dec-2016 03:47:03 America/Detroit] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/naraeons/public_html/nfd/php/sql.php on line 18
+[05-Dec-2016 03:54:08 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:08 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:09 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:10 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:10 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:10 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:11 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:11 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:11 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:12 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:12 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:12 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:13 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:13 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 03:54:13 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:03:40 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:03:41 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:03:43 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:03:44 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:04:10 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:04:10 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:04:11 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:04:11 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:04:11 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:05:02 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:05:56 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:06:01 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:06:02 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:06:22 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:06:37 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:06:42 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:06:53 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:08:59 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:09:26 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:09:27 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 04:09:48 America/Detroit] PHP Fatal error:  Call to undefined function sqlDuplicatedID() in /home/naraeons/public_html/nfd/php/duplicated_ID.php on line 6
+[05-Dec-2016 12:43:59 America/Detroit] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/naraeons/public_html/nfd/seproj/php/order_do.php on line 36
+[05-Dec-2016 12:55:08 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:55:11 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:55:32 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:55:38 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:55:54 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:58:56 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:58:58 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 12:59:22 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 45
+[05-Dec-2016 13:01:04 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:03:35 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:03:51 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:04:51 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:04:57 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:09:33 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:09:36 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:10:42 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:10:44 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:11:19 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:11:48 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:12:33 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 14
+[05-Dec-2016 13:14:16 America/Detroit] PHP Parse error:  syntax error, unexpected '}' in /home/naraeons/public_html/nfd/seproj/php/myOrder.php on line 16

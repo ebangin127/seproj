@@ -15,7 +15,7 @@ $(document).ready(function(){
 		url:'../php/myOrder.php?id='+id,
 		success:function(data){
 			if(data == 0){
-				$("#tbody").html('<div class="panel-heading"><h4>주문 내역이 없습니다.</h4></div>');
+				$("#tbody").html('<tr><td colspan="5">주문 내역이 없습니다.</td></tr>');
 			}
 			else
 				$("#tbody").html(data);

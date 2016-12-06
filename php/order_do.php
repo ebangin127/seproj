@@ -9,7 +9,7 @@
 	$address2 = $_POST['address2'];
 	$pid = $_POST['directOrder'];
 	$qty = $_POST['qty'];
-	if($pid == "0"){
+	if($pid == ""){
 		$cart = sqlMycart($buyer);
 		$count = mysqli_num_rows($cart);
 
